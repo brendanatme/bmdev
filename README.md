@@ -1,14 +1,23 @@
-# Portfolio
+# BM Dev
 
 ## Development
 
-First, run the development server:
+Run development server:
 
 ```bash
 npm run dev
 ```
 
-## @todo
+## Deployment
 
-- menu
-- console interface
+Build project:
+
+```bash
+npm run build
+```
+
+Start prod server:
+
+```bash
+npm start
+```
