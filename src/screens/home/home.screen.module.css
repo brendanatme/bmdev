@@ -1,0 +1,217 @@
+@keyframes changeBgColor {
+  0% {
+    background-color: rgb(56, 53, 236); /* #5135ec */
+  }
+  50% {
+    background-color: rgb(119, 43, 189); /* #8c2bbd */
+  }
+  100% {
+    background-color: rgb(167, 36, 169); /* #bd2b61 */
+  }
+}
+
+.bg {
+  /* animation: changeBgColor 30s linear alternate infinite; */
+  /* background-color: #3835ec; #5135ec */
+  /* background-image: linear-gradient(315deg, #772bbd, #a724a9); */
+  /* background: linear-gradient(217deg, rgba(119, 43, 189, 1), rgba(119, 43, 189, 0) 100%),
+    linear-gradient(127deg, rgba(169, 36, 165, 1), rgba(169, 36, 165 ,0) 100%),
+    linear-gradient(336deg, rgba(98, 53, 236, 1), rgba(98, 53, 236, 0) 100%); */
+  /* background: linear-gradient(217deg, rgb(43, 143, 189), rgba(119, 43, 189, 0) 100%),
+    linear-gradient(127deg, rgb(36, 138, 169), rgba(169, 36, 165 ,0) 100%),
+    linear-gradient(336deg, rgb(53, 138, 236), rgba(98, 53, 236, 0) 100%); */
+  background: linear-gradient(217deg, rgb(43, 135, 189), rgba(119, 43, 189, 0) 100%),
+    linear-gradient(127deg, rgb(32, 177, 196), rgba(169, 36, 165 ,0) 100%),
+    linear-gradient(336deg, rgb(53, 132, 236), rgba(98, 53, 236, 0) 100%);
+}
+
+/**
+
+@todo: ACCENT COLOR: #d7d8a7 or maybe rgb(253, 255, 150)
+
+**/
+
+.title {
+  opacity: 0;
+  transition: opacity 1s;
+  user-select: none;
+}
+
+.active .title {
+  opacity: 1;
+}
+
+.project {
+  box-shadow: 0 0 40px rgba(0,0,0,0.15);
+  height: 67vh;
+  overflow: hidden;
+  position: relative;
+  width: 50vw;
+}
+
+@media only screen and (min-width: 769px) {
+  .project {
+    height: 36vh;
+    width: 33vw;
+  }
+}
+
+.project:active {
+  transform: translateY(3px);
+}
+
+/*
+
+  @todo refactor all of this below
+
+  $ease-out: cubic-bezier(0.06, 0.49, 0.4, 0.95);
+  $ease-out-strong: cubic-bezier(0.01, 0.92, 0.12, 0.97);
+
+*/
+
+.project:hover {
+  cursor: pointer;
+}
+
+.projectBg {
+  transition: transform .333s ease-out;
+}
+
+.project:hover .projectBg {
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .projectBg {
+    transform: scale(1.05);
+  }
+}
+
+.projectOverlay {
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity .333s;
+}
+
+.project:hover .projectOverlay {
+  opacity: 1;
+}
+
+.project:active .projectOverlay {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .projectOverlay {
+    opacity: 1;
+  }
+}
+
+.projectMeta {
+  bottom: 0;
+  left: 0;
+}
+
+.projectMeta:before {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .5s cubic-bezier(0.01, 0.92, 0.12, 0.97);
+  width: 100%;
+}
+
+.project:hover .projectMeta:before {
+  transform: scaleX(0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  .projectMeta:before {
+    transform: scaleX(0.2);
+  }
+}
+
+.projectName {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95), transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95);
+}
+
+.project:hover .projectName {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .1s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .1s;
+}
+
+@media only screen and (max-width: 768px) {
+  .projectName {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .1s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .1s;
+  }
+}
+
+.projectClient {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95), transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95);
+}
+
+.project:hover .projectClient {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .2s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .projectClient {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .2s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .2s;
+  }
+}
+
+.projectDate {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95), transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95);
+}
+
+.project:hover .projectDate {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .3s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .3s;
+}
+
+@media only screen and (max-width: 768px) {
+  .projectDate {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .3s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .3s;
+  }
+}
+
+.client0 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-12deg) translateY(260px); }
+.client1 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-5deg) translateY(215px); }
+.client2 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(0deg) translateY(200px); }
+.client3 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(5deg) translateY(212px); }
+.client4 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(10deg) translateY(248px); }
+
+.active .client0 { opacity: 1; transition: opacity 1s linear .25s, transform 1s cubic-bezier(.02,.78,.24,.98) .25s; transform: rotate(-12deg) translateY(60px); }
+.active .client1 { opacity: 0.5; transition: opacity 1s linear .30s, transform 1s cubic-bezier(.02,.78,.24,.98) .30s; transform: rotate(-5deg) translateY(15px); }
+.active .client2 { opacity: 1; transition: opacity 1s linear .35s, transform 1s cubic-bezier(.02,.78,.24,.98) .35s; transform: rotate(0deg) translateX(40px) translateY(-25px); }
+.active .client3 { opacity: 1; transition: opacity 1s linear .40s, transform 1s cubic-bezier(.02,.78,.24,.98) .40s; transform: rotate(5deg) translateX(-25px) translateY(-60px); }
+.active .client4 { opacity: 1; transition: opacity 1s linear .45s, transform 1s cubic-bezier(.02,.78,.24,.98) .45s; transform: rotate(10deg) translateX(-18px) translateY(-90px); }
+
+@media only screen and (min-width: 768px) {
+  .active .client0 { transform: rotate(-12deg) translateY(60px); }
+  .active .client1 { transform: rotate(-5deg) translateY(15px); }
+  .active .client2 { transform: rotate(0deg) translateY(0px); }
+  .active .client3 { transform: rotate(5deg) translateY(12px); }
+  .active .client4 { transform: rotate(10deg) translateY(48px); }
+}

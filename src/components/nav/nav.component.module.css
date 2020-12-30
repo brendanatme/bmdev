@@ -1,0 +1,37 @@
+.nav {
+  color: #fff;
+  z-index: 9;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav.closed {
+  transition: visibility 1s;
+  visibility: hidden;
+}
+
+.bg1 {
+  background-color: #445;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg2 {
+  background-color: #223;
+  height: 140%;
+  left: -20%;
+  top: -20%;
+  width: 140%;
+  z-index: 1;
+}
+
+.body {
+  position: absolute;
+  z-index: 2;
+}
+
+.display48 {
+  font-size: 3em;
+  font-weight: 100;
+  text-transform: uppercase;
+}

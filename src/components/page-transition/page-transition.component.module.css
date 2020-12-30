@@ -1,0 +1,85 @@
+@keyframes startBgTransition {
+  0% {
+    transform: rotateZ(15deg) translateY(160vh);
+    visibility: hidden;
+  }
+
+  100% {
+    transform: rotateZ(15deg) translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes endBgTransition {
+  0% {
+    transform: rotateZ(15deg) translateY(0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotateZ(15deg) translateY(-160vh);
+    visibility: hidden;
+  }
+}
+
+@keyframes startLogoTransition {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes endLogoTransition {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+.bg {
+  background: #fff;
+  height: 160vh;
+  left: -30vw;
+  position: fixed;
+  top: -30vh;
+  transform: rotateZ(15deg) translateY(0);
+  visibility: visible;
+  width: 160vw;
+  z-index: 11;
+}
+
+.bg--start {
+  animation: startBgTransition 1s cubic-bezier(.76,.17,.08,.93) both;
+}
+
+.bg--end {
+  animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) .5s both;
+}
+
+.logo {
+  fill: #31b8f3;
+  height: 64px;
+  z-index: 11;
+}
+
+.logo--start {
+  animation: startLogoTransition 1s cubic-bezier(.76,.17,.08,.93) both;
+}
+
+.logo--end {
+  animation: endLogoTransition 1s cubic-bezier(.05,.95,.05,.95) .3s both;
+}

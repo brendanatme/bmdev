@@ -1,0 +1,41 @@
+.carousel {
+  text-indent: inherit;
+}
+
+.scene {
+  perspective: 1000px;
+}
+
+.slides {
+  transform: translateZ(-100vh);
+  transform-style: preserve-3d;
+}
+
+.slide {
+  cursor: grab;
+  transform-origin: center center;
+}
+.carousel.x > .scene > .slides > .slide.overflow {
+  width: 50%;
+}
+.carousel.y > .scene > .slides > .slide.overflow {
+  height: 50%;
+}
+
+.slide.isGrabbing {
+  cursor: grabbing;
+}
+
+.nextBtn {
+  appearance: none;
+  bottom: 70px;
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+}
+.nextBtn:focus {
+  outline: none;
+}
+.nextBtn:active {
+  transform: translateY(3px);
+}

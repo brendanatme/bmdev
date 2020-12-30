@@ -1,0 +1,47 @@
+@media only screen and (max-width: 768px) {
+  .sm\:br {
+    display: block;
+  }
+}
+
+.text-hero-1 {
+  @apply font-sans font-bold;
+  font-size: 10rem;
+  left: -0.5rem;
+  line-height: 1;
+  position: relative;
+  user-select: none;
+}
+
+.text-hero-2 {
+  @apply font-sans font-bold text-5xl;
+  left: -0.1rem;
+  line-height: 1;
+  position: relative;
+  user-select: none;
+}
+
+.text-copy-1 {
+  @apply font-sans font-medium text-3xl;
+  user-select: none;
+}
+
+.text-copy-2 {
+  @apply font-sans text-xl;
+  user-select: none;
+}
+
+.text-copy-3 {
+  @apply font-sans text-base;
+  user-select: none;
+}
+
+.text-display-2 {
+  @apply font-sans font-extralight uppercase text-5xl; 
+  user-select: none;
+}
+
+.text-display-3 {
+  @apply font-sans font-extralight uppercase text-3xl; 
+  user-select: none;
+}

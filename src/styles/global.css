@@ -1,0 +1,8 @@
+html,
+body {
+  overscroll-behavior: none;
+}
+
+.svg_icons__hidden {
+  display: none;
+}

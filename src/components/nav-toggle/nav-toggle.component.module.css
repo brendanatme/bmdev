@@ -1,0 +1,17 @@
+.object {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  height: 40px;
+  outline: none !important;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.object:active {
+  transform: translateY(2px);
+}

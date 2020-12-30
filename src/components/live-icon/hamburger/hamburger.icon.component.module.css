@@ -1,0 +1,48 @@
+.s {
+  height: 12px;
+  width: 16px;
+}
+
+.m {
+  height: 24px;
+  width: 32px;
+}
+
+.l {
+  height: 36px;
+  width: 48px;
+}
+
+.xl {
+  height: 48px;
+  width: 64px;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.bar {
+  border-radius: 2px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  transform-origin: center right;
+  width: 100%;
+}
+.white .bar { background-color: #fff; }
+.black .bar { background-color: #000; }
+
+.bar0 {
+  top: 0;
+}
+
+.bar1 {
+  margin-top: -2px;
+  top: 50%;
+}
+
+.bar2 {
+  bottom: 0;
+}
+

@@ -1,0 +1,46 @@
+.s {
+  height: 15px;
+  width: 15px;
+}
+
+.m {
+  height: 30px;
+  width: 30px;
+}
+
+.l {
+  height: 45px;
+  width: 45px;
+}
+
+.xl {
+  height: 60px;
+  width: 60px;
+}
+
+.x {
+  position: relative;
+}
+
+.bar {
+  border-radius: 2px;
+  height: 4px;
+  position: absolute;
+  width: 138%;
+}
+.white .bar { background-color: #fff; }
+.black .bar { background-color: #000; }
+
+.bar0 {
+  left: 2px;
+  transform: rotateZ(45deg);
+  transform-origin: top left;
+  top: 0;
+}
+
+.bar1 {
+  right: 2px;
+  transform: rotateZ(315deg);
+  transform-origin: top right;
+  top: 0;
+}
