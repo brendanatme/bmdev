@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -8,21 +6,21 @@ module.exports = {
   purge: [
     './src/base/**/*.js',
     './src/components/**/*.js',
+    './src/data/**/*.js',
     './src/layouts/**/*.js',
     './src/screens/**/*.js',
     './pages/**/*.js',
   ],
   theme: {
-    // colors: {
-    //   gray: colors.coolGray,
-    //   blue: colors.lightBlue,
-    //   red: colors.rose,
-    //   pink: colors.fuchsia,
-    // },
     fontFamily: {
       sans: ['Work Sans', 'sans-serif'],
     },
     extend: {
+      colors: {
+        yellow: {
+          300: '#fbf76b',
+        }
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',

@@ -21,25 +21,15 @@
     linear-gradient(127deg, rgb(36, 138, 169), rgba(169, 36, 165 ,0) 100%),
     linear-gradient(336deg, rgb(53, 138, 236), rgba(98, 53, 236, 0) 100%); */
   background: linear-gradient(217deg, rgb(43, 135, 189), rgba(119, 43, 189, 0) 100%),
-    linear-gradient(127deg, rgb(32, 177, 196), rgba(169, 36, 165 ,0) 100%),
+    linear-gradient(127deg, rgb(32, 177, 196), rgba(169, 36, 165, 0) 100%),
     linear-gradient(336deg, rgb(53, 132, 236), rgba(98, 53, 236, 0) 100%);
 }
 
 /**
 
-@todo: ACCENT COLOR: #d7d8a7 or maybe rgb(253, 255, 150)
+@todo: ACCENT COLOR: #d7d8a7 or maybe rgb(253, 255, 150) or #fbf76b
 
 **/
-
-.title {
-  opacity: 0;
-  transition: opacity 1s;
-  user-select: none;
-}
-
-.active .title {
-  opacity: 1;
-}
 
 .project {
   box-shadow: 0 0 40px rgba(0,0,0,0.15);
@@ -214,4 +204,8 @@
   .active .client2 { transform: rotate(0deg) translateY(0px); }
   .active .client3 { transform: rotate(5deg) translateY(12px); }
   .active .client4 { transform: rotate(10deg) translateY(48px); }
+}
+
+.social {
+  color: rgba(0, 141, 195, 0.4);
 }

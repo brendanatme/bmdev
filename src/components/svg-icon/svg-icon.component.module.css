@@ -1,18 +1,25 @@
 
+.icon {
+  height: 100px;
+  width: 100px;
+}
+
+.Architecture,
+.Email,
+.Networking,
 .UserPhone {
-  fill: white;
-  height: 100px;
-  width: 100px;
+  text-indent: 0;
 }
 
-.Architecture {
-  fill: white;
-  height: 100px;
-  width: 100px;
+.icon.Github {
+  height: 80px;
+  margin: 10px;
+  width: 80px;
 }
 
-.Networking {
-  fill: white;
-  height: 100px;
-  width: 100px;
+.icon.LinkedIn {
+  height: 80px;
+  margin: 10px;
+  width: 80px;
 }
+

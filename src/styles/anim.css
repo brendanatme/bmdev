@@ -1,0 +1,41 @@
+/*
+  
+  fade in animation
+
+*/
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide--active .fade-in { opacity: 1; }
+
+/*
+  
+  fade in + slide up animation
+
+*/
+.fade-in-slide-up-200,
+.fade-in-slide-up-250,
+.fade-in-slide-up-300,
+.fade-in-slide-up-350,
+.fade-in-slide-up-400 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity .25s, transform .25s;
+}
+
+.slide--active .fade-in-slide-up-200,
+.slide--active .fade-in-slide-up-250,
+.slide--active .fade-in-slide-up-300,
+.slide--active .fade-in-slide-up-350,
+.slide--active .fade-in-slide-up-400 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.slide--active .fade-in-slide-up-200 { transition: opacity 1s cubic-bezier(.02,.78,.24,.98) .20s, transform 1s cubic-bezier(.02,.78,.24,.98) .20s; }
+.slide--active .fade-in-slide-up-250 { transition: opacity 1s cubic-bezier(.02,.78,.24,.98) .25s, transform 1s cubic-bezier(.02,.78,.24,.98) .25s; }
+.slide--active .fade-in-slide-up-300 { transition: opacity 1s cubic-bezier(.02,.78,.24,.98) .30s, transform 1s cubic-bezier(.02,.78,.24,.98) .30s; }
+.slide--active .fade-in-slide-up-350 { transition: opacity 1s cubic-bezier(.02,.78,.24,.98) .35s, transform 1s cubic-bezier(.02,.78,.24,.98) .35s; }
+.slide--active .fade-in-slide-up-400 { transition: opacity 1s cubic-bezier(.02,.78,.24,.98) .40s, transform 1s cubic-bezier(.02,.78,.24,.98) .40s; }

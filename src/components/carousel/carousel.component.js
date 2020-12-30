@@ -32,7 +32,7 @@ const ARROWS = {
 const DIR_MAP = { x: 0, y: 1 }
 
 const Carousel = ({
-  activeClass = 'slide--active',
+  activeClass,
   axis = 'y',
   children,
   nextArrow = true,
@@ -182,7 +182,7 @@ const Carousel = ({
         <div className={`fill ${styles.slides}`} {...bind()}>
           {springs.map((styleProps, i) => (
             <animated.div
-              className={`fill ${i === index.current ? activeClass : ''} ${styles.slide} ${overflow ? styles.overflow : ''} ${isGrabbing ? styles.isGrabbing : ''}`}
+              className={`fill ${i === index.current ? 'slide--active ' + activeClass : ''} ${styles.slide} ${overflow ? styles.overflow : ''} ${isGrabbing ? styles.isGrabbing : ''}`}
               key={i}
               style={styleProps}
             >
