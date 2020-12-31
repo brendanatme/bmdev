@@ -33,8 +33,9 @@ const Picture = ({
         ))}
       </>
       <img
-        alt=""
-        className={`fill ${styles.picture} ${className}`}
+        alt={image.alt}
+        className={`fill select-none ${styles.picture} ${className}`}
+        draggable="false"
         src={image.sm[image.sm.length - 1].src}
       />
     </picture>

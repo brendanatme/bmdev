@@ -16,6 +16,9 @@ module.exports = {
       sans: ['Work Sans', 'sans-serif'],
     },
     extend: {
+      lineHeight: {
+        justright: '1.125',
+      },
       colors: {
         yellow: {
           300: '#fbf76b',

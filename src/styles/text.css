@@ -45,3 +45,11 @@
   @apply font-sans font-extralight uppercase text-3xl; 
   user-select: none;
 }
+
+.text-shadow-sm {
+  text-shadow: 0 0 5px rgba(0,0,0,.05);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 0 10px rgba(0,0,0,.05);
+}

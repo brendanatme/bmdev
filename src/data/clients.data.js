@@ -1,7 +1,52 @@
 export default [
-  { id: 'the-rcu', bg: 'bg-opacity-20', op: '100', img: '/roles/rcu.png', w: '150px' },
-  { id: 'bendigi-technologies', bg: 'bg-opacity-100', op: '50', img: '/roles/bendigi.png', w: '249px' },
-  { id: 'telmetrics', bg: 'bg-opacity-10', op: '100', img: '/roles/telmetrics.png', w: '185px' },
-  { id: 'bounteous', bg: 'bg-opacity-10', op: '100', img: '/roles/bounteous.svg', w: '150px' },
-  { id: 'pixelcarve', bg: 'bg-opacity-30', op: '100', img: '/roles/pixelcarve.svg', w: '150px' },
+  {
+    id: 'the-rcu',
+    thumb: {
+      bg: 'bg-opacity-20',
+      img: '/roles/rcu.png',
+      op: '100',
+      w: '150px',
+      hoverBg: 'bg-white',
+    },
+  },
+  {
+    id: 'bendigi-technologies',
+    thumb: {
+      bg: 'bg-opacity-100',
+      img: '/roles/bendigi.png',
+      op: '50',
+      w: '249px',
+      hoverBg: 'bg-white',
+    },
+  },
+  {
+    id: 'telmetrics',
+    thumb: {
+      bg: 'bg-opacity-10',
+      img: '/roles/telmetrics.png',
+      op: '100',
+      w: '185px',
+      hoverBg: 'bg-blue-500',
+    },
+  },
+  {
+    id: 'bounteous',
+    thumb: {
+      bg: 'bg-opacity-10',
+      img: '/roles/bounteous.svg',
+      op: '100',
+      w: '150px',
+      hoverBg: 'bg-blue-500',
+    },
+  },
+  {
+    id: 'pixelcarve',
+    thumb: {
+      bg: 'bg-opacity-30',
+      img: '/roles/pixelcarve.svg',
+      op: '100',
+      w: '150px',
+      hoverBg: 'bg-white',
+    },
+  },
 ]

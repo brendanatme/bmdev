@@ -13,3 +13,33 @@
   top: 0;
   width: 100%;
 }
+
+.ratio-9x16 {
+  height: 0;
+  padding-top: 177.778%;
+  position: relative;
+  width: 100%;
+}
+
+.ratio-16x9 {
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .md\:ratio-16x9 {
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+  }
+
+  .md\:ratio-9x16 {
+    height: 0;
+    padding-top: 177.778%;
+    position: relative;
+    width: 100%;
+  }
+}
