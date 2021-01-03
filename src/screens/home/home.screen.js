@@ -99,18 +99,16 @@ const HomeScreen = () => {
           <div className="container p-6 text-white">
             <div className="flex flex-wrap justify-evenly">
               {clients.map((client, i) => (
-                <Link
+                <div
                   className={`block m-5 relative z-10 ${styles.client} ${styles['client' + i]} flex flex-col rounded overflow-hidden`}
-                  href={`/roles/${client.id}`}
                   key={`client${i}`}
                 >
-                  <div className={`${styles.clientMask} p-5 fill z-0 ${client.thumb.hoverBg}`} />
                   <div
                     className={`relative p-5 z-10 bg-white ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
                   >
                     <img className="z-10 flex-initial" src={client.thumb.img} style={{ width: client.thumb.w }} />
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

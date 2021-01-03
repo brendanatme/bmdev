@@ -146,15 +146,6 @@
   }
 }
 
-.clientMask {
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 0.5s cubic-bezier(.02,.78,.24,.98);
-}
-
-.client:hover .clientMask {
-  clip-path: inset(0 0 0 0);
-}
-
 .client0 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-12deg) translateY(260px); }
 .client1 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-5deg) translateY(215px); }
 .client2 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(0deg) translateY(200px); }

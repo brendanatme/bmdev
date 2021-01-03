@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
-import { clients, projects } from '@/src/data'
+import { projects } from '@/src/data'
 import layoutModel from '@/src/models/layout.model'
 import Link from '@/src/components/link'
 import styles from './nav.component.module.css'
@@ -70,26 +70,8 @@ const Nav = () => {
   })
 
   const tiles2Ref = useRef()
-  const tiles2 = useTransition(navIsOpen ? clients : EMPTY_ARRAY, {
+  const tiles2 = useTransition(navIsOpen ? experiments : EMPTY_ARRAY, {
     ref: tiles2Ref,
-    trail: 400 / clients.length,
-    from: OPACITY_0,
-    enter: OPACITY_1,
-    leave: OPACITY_0,
-  })
-
-  const text3Ref = useRef()
-  const text3 = useSpring({
-    ref: text3Ref,
-    opacity: navIsOpen ? 1 : 0,
-    transform: navIsOpen
-      ? 'translateX(0px)'
-      : 'translateX(-10px)',
-  })
-
-  const tiles3Ref = useRef()
-  const tiles3 = useTransition(navIsOpen ? experiments : EMPTY_ARRAY, {
-    ref: tiles3Ref,
     trail: 400 / experiments.length,
     from: OPACITY_0,
     enter: OPACITY_1,
@@ -98,11 +80,11 @@ const Nav = () => {
 
   useChain(
     navIsOpen
-      ? [bg1Ref, bg2Ref, text0Ref, text1Ref, tiles1Ref, text2Ref, tiles2Ref, text3Ref, tiles3Ref]
-      : [tiles3Ref, text3Ref, tiles2Ref, text2Ref, tiles1Ref, text1Ref, text0Ref, bg2Ref, bg1Ref],
+      ? [bg1Ref, bg2Ref, text0Ref, text1Ref, tiles1Ref, text2Ref, tiles2Ref]
+      : [tiles2Ref, text2Ref, tiles1Ref, text1Ref, text0Ref, bg2Ref, bg1Ref],
     navIsOpen
-      ? [0, 0.2, 0.4, 0.45, 0.5, 0.65, 0.7, 0.85, 0.9]
-      : [0, 0.05, 0.1, 0.2, 0.25, 0.35, 0.4, 0.45, 0.55]
+      ? [0, 0.2, 0.4, 0.45, 0.5, 0.65, 0.7]
+      : [0, 0.05, 0.1, 0.2, 0.25, 0.35, 0.4]
   )
   
   return (
@@ -132,23 +114,10 @@ const Nav = () => {
           </nav>
         </section>
         <section className="my-10">
-          <animated.h3 className="text-display-2" style={text2}>Clients &amp; Employers</animated.h3>
+          <animated.h3 className="text-display-2" style={text2}>Experiments</animated.h3>
           <nav className="my-2">
             <ul className="flex flex-wrap items-left h-16 md:h-32">
-              {tiles2((style, item, _, i) => (
-                <animated.li
-                  className={`w-16 md:w-32 h-16 md:h-32 bg-gray-${i + 1}00`}
-                  style={style}
-                />
-              ))}
-            </ul>
-          </nav>
-        </section>
-        <section className="my-10">
-          <animated.h3 className="text-display-2" style={text3}>Experiments</animated.h3>
-          <nav className="my-2">
-            <ul className="flex flex-wrap items-left h-16 md:h-32">
-              {tiles3((style, item) => (
+              {tiles2((style, item) => (
                 <animated.li
                   className={`w-16 md:w-32 h-16 md:h-32 ${item.bgClass}`}
                   style={style}
