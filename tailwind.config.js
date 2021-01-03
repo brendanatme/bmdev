@@ -14,6 +14,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Work Sans', 'sans-serif'],
+      serif: ['Georgia', 'Times New Roman', 'Times', 'serif'],
     },
     extend: {
       lineHeight: {

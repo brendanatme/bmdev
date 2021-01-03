@@ -21,30 +21,34 @@
   user-select: none;
 }
 
-.text-copy-1 {
+.text-display-1 {
   @apply font-sans font-medium text-3xl;
   user-select: none;
 }
 
-.text-copy-2 {
+.text-display-2 {
   @apply font-sans text-xl;
   user-select: none;
 }
 
-.text-copy-3 {
+.text-display-3 {
   @apply font-sans text-base;
   user-select: none;
 }
 
-.text-display-2 {
-  @apply font-sans font-extralight uppercase text-5xl; 
-  user-select: none;
+.text-copy {
+  @apply font-serif;
+  font-size: 18px;
+  line-height: 1.6925;
+  font-weight: 400;
 }
 
-.text-display-3 {
-  @apply font-sans font-extralight uppercase text-3xl; 
-  user-select: none;
+@media only screen and (min-width: 768px) {
+  .text-copy {
+    font-size: 26px;
+  }
 }
+
 
 .text-shadow-sm {
   text-shadow: 0 0 5px rgba(0,0,0,.05);
