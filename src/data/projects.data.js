@@ -1,4 +1,5 @@
 const StoriApp = {
+  thumbClient: 'RCU',
   client: 'RCU - Responsible Cannabis Use',
   date: 'Sep. 2020',
   id: 'stori-app',
@@ -13,6 +14,11 @@ const StoriApp = {
         { src: '/projects/stori_app@lg.webp', type: 'webp' },
         { src: '/projects/stori_app@lg.jpg', type: 'jpeg' },
       ],
+    },
+    inventory: {
+      alt: 'Stori app adding to inventory',
+      sm: [{ src: '/projects/stori_app_inventory@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/stori_app_inventory@lg.png', type: 'png' }],
     }
   },
   name: 'Stori app',
@@ -32,7 +38,7 @@ StoriApp.frames = [
   {
     layout: 'TextLeftImageRight',
     contents: [
-      StoriApp.images.banner,
+      StoriApp.images.inventory,
       `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">Stori app</span> is a companion app for the Stori cannabis container.</h2>
       <p class="fade-in-slide-up-350">The app tracks your inventory and provides you with product details and offers.</p>`
     ],
@@ -49,7 +55,7 @@ StoriApp.frames = [
     layout: 'TextLeftTextRight',
     contents: [
       `<h2 class="fade-in-slide-up-300">The app was built in approximately <span class="text-yellow-300">two months</span> by two developers.</h2>`,
-      `<p class="fade-in-slide-up-350 mb-10">My roles in the project were Project Lead, Lead Back-End Developer, and Front-End Developer.</p>
+      `<p class="fade-in-slide-up-350 mb-10">My roles in the project were Project Lead, Lead Back-End Developer, Front-End Developer, and DevOps Engineer.</p>
       <p class="fade-in-slide-up-400">
         <a class="button" href="https://app.yourstori.com" target="_blank">
           <span class="button__label">Visit Project</span>
@@ -60,25 +66,70 @@ StoriApp.frames = [
   },
 ]
 
+const CanniknowWebsite = {
+  thumbClient: 'RCU',
+  client: 'RCU - Responsible Cannabis Use',
+  date: 'Apr. 2020',
+  id: 'canniknow-website',
+  images: {
+    banner: {
+      alt: 'CanniKnow website homepage banner',
+      sm: [{ src: '/projects/canniknow@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/canniknow@lg.png', type: 'png' }],
+    },
+    location: {
+      alt: 'CanniKnow website location page',
+      sm: [{ src: '/projects/canniknow_location@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/canniknow_location@lg.png', type: 'png' }],
+    },
+  },
+  name: 'Cann I Know website',
+}
+
+CanniknowWebsite.frames = [
+  {
+    layout: 'Banner',
+    contents: [
+      CanniknowWebsite.images.banner,
+      CanniknowWebsite.name,
+      CanniknowWebsite.client,
+      CanniknowWebsite.date,
+    ],
+  },
+  {
+    layout: 'TextLeftImageRight',
+    contents: [
+      CanniknowWebsite.images.location,
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CanniKnow.com</span> is TripAdvisor for cannabis.</h2>
+      <p class="fade-in-slide-up-350">The website catalogs cannabis laws and other relevant details across North America and the world.</p>`
+    ],
+  },
+  {
+    layout: 'TextLeftTextRight',
+    contents: [
+      `<h2 class="fade-in-slide-up-300">It is built using React.js and a headless CMS.</h2>`,
+      `<p class="fade-in-slide-up-350 mb-7">Building a server-side-rendered React app gave us the performance benefits of React while also keeping the SEO benefits of server-rendered HTML.</p>
+      <p class="fade-in-slide-up-350">Leveraging a headless CMS reduced the complexity of back-end development while still enabling the team to manage large datasets.</p>`
+    ],
+  },
+  {
+    layout: 'TextLeftTextRight',
+    contents: [
+      `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">two months</span> by one developer.</h2>`,
+      `<p class="fade-in-slide-up-350 mb-10">I was the sole developer and dev-ops engineer.</p>
+      <p class="fade-in-slide-up-400">
+        <a class="button" href="https://www.canniknow.com" target="_blank">
+          <span class="button__label">Visit Project</span>
+          <span class="button__hover-label">Visit Project</span>
+        </a>
+      </p>`
+    ],
+  },
+]
+
 export default [
   StoriApp,
-  {
-    client: 'RCU',
-    date: 'Apr. 2020',
-    id: 'canniknow-website',
-    images: {
-      banner: {
-        alt: 'CanniKnow website homepage banner',
-        sm: [
-          { src: '/projects/canniknow@sm.png', type: 'png' },
-        ],
-        lg: [
-          { src: '/projects/canniknow@lg.png', type: 'png' },
-        ],
-      },
-    },
-    name: 'CannIKnow website',
-  },
+  CanniknowWebsite,
   {
     client: 'RCU',
     date: 'Nov. 2019',

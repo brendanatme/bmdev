@@ -88,16 +88,16 @@ const Nav = () => {
   )
   
   return (
-    <div className={`fullscreen flex items-center justify-center ${styles.nav} ${styles[navIsOpen ? 'open' : 'closed']}`}>
+    <div className={`fullscreen flex items-center justify-center text-white z-10 ${styles[navIsOpen ? 'open' : 'closed']}`}>
       <animated.div
-        className={`fullscreen ${styles.bg1}`}
+        className="fullscreen bg-dblue z-0 opacity-70"
         style={bg1}
       />
       <animated.div
-        className={`fixed ${styles.bg2}`}
+        className={`fixed bg-dblue z-10 ${styles.bg2}`}
         style={bg2}
       />
-      <div className={`${styles.body} container p-5`}>
+      <div className="absolute z-20 container p-5">
         <animated.h2 className="text-display-1" style={text0}>Menu</animated.h2>
         <section className="my-10">
           <animated.h3 className="text-display-2" style={text1}>Projects</animated.h3>

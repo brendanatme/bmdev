@@ -10,30 +10,20 @@ import Html from '@/src/components/html'
 import Picture from '@/src/components/picture'
 
 const Banner = ({ contents }) => (
-  <>
-    <Picture className="z-0" image={contents[0]} />
-    <div className="z-0 fill bg-white opacity-30" />
-    <div className="z-10 container">
-      <div className="py-6 px-12 font-sans font-medium text-gray-600">
-        <h1 className="font-bold text-6xl">{contents[1]}</h1>
-        <h2 className="text-xl">{contents[2]}</h2>
-        <h3 className="text-xl">{contents[3]}</h3>
+  <div className="container md:flex items-center justify-center">
+    <div className="relative mx-auto md:m-0 md:w-1/2 md:left-16">
+      <div className="fade-in-slide-up-200 ratio-16x9 overflow-hidden md:rounded md:shadow-xl">
+        <div className="fill">
+          <Picture image={contents[0]} />
+        </div>
       </div>
     </div>
-  </>
-)
-
-const ThumbLeftTextRight = ({ contents }) => (
-  <div className="container p-6">
     <div
-      className={`fade-in-slide-up-200 overflow-hidden rounded shadow-xl relative p-5 bg-white ${contents[0].bg} inline-block mb-6`}
+      className="bg-dblue md:inline-block relative py-4 px-6 lg:p-10 lg:-left-16 font-sans font-medium text-white md:rounded md:shadow-xl"
     >
-      <img src={contents[0].img} style={{ width: contents[0].w }} />
-    </div>
-    <div className="max-w-lg">
-      <h1 className="fade-in-slide-up-300 font-bold text-3xl">{contents[1]}</h1>
-      <h2 className="fade-in-slide-up-350 text-xl"><em>{contents[2]}</em></h2>
-      <h3 className="fade-in-slide-up-400 text-xl">Role(s): {contents[3]}</h3>
+      <h1 className="font-bold text-3xl lg:text-5xl">{contents[1]}</h1>
+      <h2 className="text-xl mt-2">{contents[2]}</h2>
+      <h3 className="text-xl">{contents[3]}</h3>
     </div>
   </div>
 )
@@ -70,7 +60,6 @@ const TextLeftTextRight = ({ contents }) => (
 
 const Layouts = {
   Banner,
-  ThumbLeftTextRight,
   TextLeftImageRight,
   TextLeftTextRight,
 }

@@ -85,7 +85,7 @@ const HomeScreen = () => {
                     <div className={`${styles.projectMeta} absolute bottom-0 left-0 py-2 px-3 md:py-5 md:px-10 w-full`}>
                       <div className={`${styles.projectMetaBg} bg-gray-50 fill`} />
                       <div className={`text-gray-700 text-display-1 my-1 md:my-2 flex-1 leading-none ${styles.projectName}`}>{project.name}</div>
-                      <div className={`text-gray-700 text-display-2 my-1 md:my-2 flex-initial ${styles.projectClient}`}>{project.client}</div>
+                      <div className={`text-gray-700 text-display-2 my-1 md:my-2 flex-initial ${styles.projectClient}`}>{project.thumbClient}</div>
                       <div className={`text-gray-700 text-display-2 my-1 md:my-2 flex-initial ${styles.projectDate}`}>{project.date}</div>
                     </div>
                   </div>
