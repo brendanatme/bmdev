@@ -71,7 +71,7 @@
 }
 
 .logo {
-  fill: #31b8f3;
+  fill: url('#icons_svg__logo-gradient') #31b8f3;
   height: 64px;
   z-index: 11;
 }

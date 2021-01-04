@@ -10,7 +10,8 @@
   text-shadow: 0 0 10px rgba(0,0,0,.05);
 }
 
-.html p {
+.html p,
+.html ul {
   @apply font-serif;
   font-size: 18px;
   line-height: 1.6925;
@@ -18,8 +19,13 @@
   text-shadow: 0 0 5px rgba(0,0,0,.05);
 }
 
+.html ul {
+  @apply list-inside list-disc;
+}
+
 @media only screen and (min-width: 768px) {
-  .html p {
+  .html p,
+  .html ul {
     font-size: 26px;
   }
 }

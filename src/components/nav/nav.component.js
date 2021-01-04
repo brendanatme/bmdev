@@ -1,19 +1,15 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
-import { projects } from '@/src/data'
+import { experiments, projects } from '@/src/data'
 import layoutModel from '@/src/models/layout.model'
 import Link from '@/src/components/link'
+import Picture from '@/src/components/picture'
 import styles from './nav.component.module.css'
-import Picture from '../picture'
 
 const EMPTY_ARRAY = []
 const OPACITY_0 = { opacity: 0 }
 const OPACITY_1 = { opacity: 1 }
-
-const experiments = [
-  { bgClass: 'bg-gray-50' },
-]
 
 const Nav = () => {
   const { navIsOpen } = useSelector(layoutModel.selectors.item)
@@ -106,7 +102,7 @@ const Nav = () => {
               {tiles1((style, project) => (
                 <animated.li className="w-16 md:w-32 h-16 md:h-32 relative" style={style}>
                   <Link href={`/projects/${project.id}`}>
-                    <Picture image={project.images.banner} />
+                    <Picture image={project.images.banner} only="sm" />
                   </Link>
                 </animated.li>
               ))}
@@ -117,11 +113,15 @@ const Nav = () => {
           <animated.h3 className="text-display-2" style={text2}>Experiments</animated.h3>
           <nav className="my-2">
             <ul className="flex flex-wrap items-left h-16 md:h-32">
-              {tiles2((style, item) => (
+              {tiles2((style, experiment) => (
                 <animated.li
-                  className={`w-16 md:w-32 h-16 md:h-32 ${item.bgClass}`}
+                  className="relative w-16 md:w-32 h-16 md:h-32"
                   style={style}
-                />
+                >
+                  <a href={experiment.url} target="_blank">
+                    <Picture image={experiment.images.thumb} only="sm" />
+                  </a>
+                </animated.li>
               ))}
             </ul>
           </nav>

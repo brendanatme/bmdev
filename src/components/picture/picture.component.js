@@ -6,31 +6,35 @@
  */
 import styles from './picture.component.module.css'
 
+const LARGE = 'lg'
+const SMALL = 'sm'
+
 const Picture = ({
   className = '',
-  image
+  image,
+  only = '',
 }) => {
   return (
     <picture>
       <>
-        {image.sm.map((img, i) => (
+        {only !== LARGE ? image.sm.map((img, i) => (
           <source
             key={`sm${i}`}
-            media="(max-width: 768px)"
+            media={only !== SMALL ? '(max-width: 768px)' : null}
             srcSet={img.src}
             type={`image/${img.type}`}
           />
-        ))}
+        )) : ''}
       </>
       <>
-        {image.lg.map((img, i) => (
+        {only !== SMALL ? image.lg.map((img, i) => (
           <source
             key={`lg${i}`}
-            media="(min-width: 769px)"
+            media={only !== LARGE ? '(min-width: 769px)' : null}
             srcSet={img.src}
             type={`image/${img.type}`}
           />
-        ))}
+        )) : ''}
       </>
       <img
         alt={image.alt}

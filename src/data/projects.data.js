@@ -55,7 +55,7 @@ StoriApp.frames = [
     layout: 'TextLeftTextRight',
     contents: [
       `<h2 class="fade-in-slide-up-300">The app was built in approximately <span class="text-yellow-300">two months</span> by two developers.</h2>`,
-      `<p class="fade-in-slide-up-350 mb-10">My roles in the project were Project Lead, Lead Back-End Developer, Front-End Developer, and DevOps Engineer.</p>
+      `<p class="fade-in-slide-up-350 mb-10">My roles in the project were Project Lead, Lead Back-End Developer, Front-End Developer, and Lead DevOps Engineer.</p>
       <p class="fade-in-slide-up-400">
         <a class="button" href="https://app.yourstori.com" target="_blank">
           <span class="button__label">Visit Project</span>
@@ -127,58 +127,199 @@ CanniknowWebsite.frames = [
   },
 ]
 
+const CannedRetailApp = {
+  thumbClient: 'RCU',
+  client: 'RCU - Responsible Cannabis Use',
+  date: 'Nov. 2019',
+  id: 'canned-retail-app',
+  images: {
+    banner: {
+      alt: 'CannedRetail app question',
+      sm: [{ src: '/projects/cannedretail_q@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/cannedretail_q@lg.png', type: 'png' }],
+    },
+    answer: {
+      alt: 'CannedRetail app answer',
+      sm: [{ src: '/projects/cannedretail_a@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/cannedretail_a@lg.png', type: 'png' }],
+    },
+  },
+  name: 'CannEd Retail app & widget',
+}
+
+CannedRetailApp.frames = [
+  {
+    layout: 'Banner',
+    contents: [
+      CannedRetailApp.images.banner,
+      CannedRetailApp.name,
+      CannedRetailApp.client,
+      CannedRetailApp.date,
+    ],
+  },
+  {
+    layout: 'TextLeftImageRight',
+    contents: [
+      CannedRetailApp.images.answer,
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CannEd Retail</span> is a comprehensive solution to cannabis customer education for retailers.</h2>
+      <p class="fade-in-slide-up-350">An omni-channel offering, users can interact in-store or online.</p>`
+    ],
+  },
+  {
+    layout: 'TextLeftTextRight',
+    contents: [
+      `<h2 class="fade-in-slide-up-200">Turnaround: approximately <span class="text-yellow-300">one month</span></h2>`,
+      `<p class="fade-in-slide-up-250">Features:</p>
+      <ul class="fade-in-slide-up-300 mb-6">
+        <li>Custom age gate</li>
+        <li>Custom pages</li>
+        <li>A sprinkling of unobtrusive parallax</li>
+      </ul>
+      <p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer.</p>
+      <p class="fade-in-slide-up-400">
+        <a class="button" href="https://highlife.ca" target="_blank">
+          <span class="button__label">Visit Project</span>
+          <span class="button__hover-label">Visit Project</span>
+        </a>
+      </p>`
+    ],
+  },
+]
+
+const HighlifeWebsite = {
+  thumbClient: 'HighLife',
+  client: 'HighLife',
+  date: 'Feb. 2019',
+  id: 'highlife-website',
+  images: {
+    banner: {
+      alt: 'HighLife website homepage banner',
+      sm: [{ src: '/projects/highlife@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/highlife@lg.png', type: 'png' }],
+    },
+    page: {
+      alt: 'HighLife website page screenshot',
+      sm: [{ src: '/projects/highlife_page@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/highlife_page@lg.png', type: 'png' }],
+    },
+  },
+  name: 'HighLife website',
+}
+
+HighlifeWebsite.frames = [
+  {
+    layout: 'Banner',
+    contents: [
+      HighlifeWebsite.images.banner,
+      HighlifeWebsite.name,
+      HighlifeWebsite.client,
+      HighlifeWebsite.date,
+    ],
+  },
+  {
+    layout: 'TextLeftImageRight',
+    contents: [
+      HighlifeWebsite.images.page,
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">HighLife.ca</span> is this Sudbury retailer's online store.</h2>
+      <p class="fade-in-slide-up-350">Built on Shopify, this slick design required a great deal of customization to fully realize the vision.</p>`
+    ],
+  },
+  {
+    layout: 'TextLeftTextRight',
+    contents: [
+      `<h2 class="fade-in-slide-up-200">Turnaround: approximately <span class="text-yellow-300">one month</span></h2>`,
+      `<p class="fade-in-slide-up-250">Features:</p>
+      <ul class="fade-in-slide-up-300 mb-6">
+        <li>Custom age gate</li>
+        <li>Custom pages</li>
+        <li>A sprinkling of unobtrusive parallax</li>
+      </ul>
+      <p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer.</p>
+      <p class="fade-in-slide-up-400">
+        <a class="button" href="https://highlife.ca" target="_blank">
+          <span class="button__label">Visit Project</span>
+          <span class="button__hover-label">Visit Project</span>
+        </a>
+      </p>`
+    ],
+  },
+]
+
+const FoglersWebsite = {
+  thumbClient: 'Pixelcarve',
+  client: 'Pixelcarve Inc.',
+  date: '2013',
+  id: 'fogler-rubinoff-website',
+  images: {
+    banner: {
+      alt: 'Foglers.com website homepage',
+      sm: [{ src: '/projects/foglers@sm.png', type: 'png' }],
+      lg: [{ src: '/projects/foglers@lg.png', type: 'png' }],
+    },
+    search: {
+      alt: 'Foglers.com website search',
+      sm: [{ src: '/projects/foglers_search@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/foglers_search@lg.png', type: 'png' }],
+    },
+    scroller: {
+      alt: 'Foglers.com website scrolling',
+      sm: [{ src: '/projects/foglers_scroller@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/foglers_scroller@lg.png', type: 'png' }],
+    },
+  },
+  name: 'Fogler Rubinoff website',
+}
+
+FoglersWebsite.frames = [
+  {
+    layout: 'Banner',
+    contents: [
+      FoglersWebsite.images.banner,
+      FoglersWebsite.name,
+      FoglersWebsite.client,
+      FoglersWebsite.date,
+    ],
+  },
+  {
+    layout: 'TextLeftImageRight',
+    contents: [
+      FoglersWebsite.images.search,
+      `<h2 class="fade-in-slide-up-300 mb-6">This website was <span class="text-yellow-300">the first</span> of its kind.</h2>
+      <p class="fade-in-slide-up-350">Serving as a corporate directory and both an external and internal resource, the site won a gold Davey award in 2013 for its first-class UX.</p>`
+    ],
+  },
+  {
+    layout: 'ImageLeftTextRight',
+    contents: [
+      FoglersWebsite.images.scroller,
+      `<h2 class="fade-in-slide-up-300 text-yellow-300">Features</h2>
+      <ul class="fade-in-slide-up-350">
+        <li>Real-time sync with search and navigation</li>
+        <li>Gesture-controlled side-scrolling with columnized text</li>
+        <li>Gyroscope-powered Google streetview</li>
+        <li>Internet Explorer 8 compatible</li>
+      </ul>`,
+    ],
+  },
+  {
+    layout: 'TextLeftTextRight',
+    contents: [
+      `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">six months</span> by two developers.</h2>`,
+      `<p class="fade-in-slide-up-350 mb-10">I was the sole front-end developer for the project.</p>
+      <p class="fade-in-slide-up-400">
+        <a class="button" href="https://www.canniknow.com" target="_blank">
+          <span class="button__label">Visit Project</span>
+          <span class="button__hover-label">Visit Project</span>
+        </a>
+      </p>`
+    ],
+  },
+]
+
 export default [
   StoriApp,
   CanniknowWebsite,
-  {
-    client: 'RCU',
-    date: 'Nov. 2019',
-    id: 'canned-retail-app',
-    images: {
-      banner: {
-        alt: 'CannedRetail app home screen',
-        sm: [
-          { src: '/projects/cannedretail.png', type: 'png' },
-        ],
-        lg: [
-          { src: '/projects/cannedretail.png', type: 'png' },
-        ],
-      },
-    },
-    name: 'CannEd Retail app',
-  },
-  {
-    client: 'HighLife',
-    date: 'Feb. 2019',
-    id: 'highlife-website',
-    images: {
-      banner: {
-        alt: 'HighLife website homepage banner',
-        sm: [
-          { src: '/projects/highlife.png', type: 'png' },
-        ],
-        lg: [
-          { src: '/projects/highlife.png', type: 'png' },
-        ],
-      },
-    },
-    name: 'HighLife website',
-  },
-  {
-    client: 'RCU',
-    date: 'Dec. 2018',
-    id: 'dontbesorry-website',
-    images: {
-      banner: {
-        alt: 'Don\' Be Sorry website homepage banner',
-        sm: [
-          { src: '/projects/dontbesorry.png', type: 'png' },
-        ],
-        lg: [
-          { src: '/projects/dontbesorry.png', type: 'png' },
-        ],
-      },
-    },
-    name: 'Don\'t Be Sorry website',
-  },
+  CannedRetailApp,
+  HighlifeWebsite,
+  FoglersWebsite,
 ]

@@ -69,7 +69,7 @@ const HomeScreen = () => {
           </div>
         </Frame>
         <Frame>
-          <Title>Projects</Title>
+          <Title>Featured <span className="sm:br" />Projects</Title>
           
           <Carousel
             axis="x"

@@ -14,7 +14,7 @@ const Banner = ({ contents }) => (
     <div className="relative mx-auto md:m-0 md:w-1/2 md:left-16">
       <div className="fade-in-slide-up-200 ratio-16x9 overflow-hidden md:rounded md:shadow-xl">
         <div className="fill">
-          <Picture image={contents[0]} />
+          <Picture image={contents[0]} only="lg" />
         </div>
       </div>
     </div>
@@ -33,13 +33,30 @@ const TextLeftImageRight = ({ contents }) => (
     <div className="md:relative mx-auto mb-5 md:m-0 w-3/4 md:w-1/2 md:-left-16">
       <div className="fade-in-slide-up-200 ratio-16x9 overflow-hidden rounded shadow-xl">
         <div className="fill">
-          <Picture image={contents[0]} />
+          <Picture image={contents[0]} only="lg" />
           <div className="fill bg-gray-500 bg-opacity-20" />
         </div>
       </div>
     </div>
     <Html
       className="relative py-2 px-6 md:p-0 w-full md:w-1/2 md:left-16"
+      content={contents[1]}
+    />
+  </div>
+)
+
+const ImageLeftTextRight = ({ contents }) => (
+  <div className="container md:flex items-center justify-center">
+    <div className="md:relative mx-auto mb-5 md:m-0 w-3/4 md:w-1/2 md:left-8">
+      <div className="fade-in-slide-up-200 ratio-16x9 overflow-hidden rounded shadow-xl">
+        <div className="fill">
+          <Picture image={contents[0]} only="lg" />
+          <div className="fill bg-gray-500 bg-opacity-20" />
+        </div>
+      </div>
+    </div>
+    <Html
+      className="relative py-2 px-6 md:p-0 w-full md:w-1/2 md:-left-8"
       content={contents[1]}
     />
   </div>
@@ -60,6 +77,7 @@ const TextLeftTextRight = ({ contents }) => (
 
 const Layouts = {
   Banner,
+  ImageLeftTextRight,
   TextLeftImageRight,
   TextLeftTextRight,
 }
