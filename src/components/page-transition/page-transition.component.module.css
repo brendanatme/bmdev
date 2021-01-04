@@ -70,6 +70,10 @@
   animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) .5s both;
 }
 
+.bg--initial {
+  animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) 2.5s both;
+}
+
 .logo {
   fill: url('#icons_svg__logo-gradient') #31b8f3;
   height: 64px;
@@ -82,4 +86,8 @@
 
 .logo--end {
   animation: endLogoTransition 1s cubic-bezier(.05,.95,.05,.95) .3s both;
+}
+
+.logo--initial {
+  animation: endLogoTransition 1s cubic-bezier(.05,.95,.05,.95) 2.3s both;
 }

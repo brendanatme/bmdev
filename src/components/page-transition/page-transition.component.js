@@ -5,7 +5,12 @@ import styles from './page-transition.component.module.css'
 
 const PageTransition = () => {
   const pageTransitionIsOpen = layoutModel.select.pageTransitionIsOpen()
-  const state = pageTransitionIsOpen ? 'start' : 'end'
+  const initialLoad = layoutModel.select.initialLoad()
+  const state = initialLoad
+    ? 'initial'
+    : pageTransitionIsOpen
+      ? 'start'
+      : 'end'
 
   return (
     <>
