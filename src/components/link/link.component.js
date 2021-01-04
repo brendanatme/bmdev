@@ -13,9 +13,8 @@
  * but we don't have any "before" hook
  */
 import useRouter from 'next/router'
-import { useDispatch, useSelector } from 'react-redux'
 import { wait } from '@brendanatme/utils'
-import layoutModel from '@/src/models/layout.model'
+import * as layoutModel from '@/src/models/layout.model'
 
 const Link = ({
   children,
@@ -23,19 +22,18 @@ const Link = ({
   href,
 }) => {
   const router = useRouter
-  const dispatch = useDispatch()
-  const { navIsOpen } = useSelector(layoutModel.selectors.item)
+  const navIsOpen = layoutModel.select.navIsOpen()
 
   const handleClick = async (e) => {
     if (navIsOpen) {
-      dispatch(layoutModel.actions.CloseNav())
+      layoutModel.trigger.closeNav()
     }
     
     if (href === router.pathname) {
       return
     }
 
-    dispatch(layoutModel.actions.StartPageTransition())
+    layoutModel.trigger.startPageTransition()
 
     await wait(1)
 

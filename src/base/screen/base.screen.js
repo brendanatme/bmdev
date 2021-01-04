@@ -7,8 +7,7 @@
  */
 import Head from 'next/head'
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import layoutModel from '@/src/models/layout.model'
+import * as layoutModel from '@/src/models/layout.model'
 import styles from './base.screen.module.css'
 
 const Screen = ({
@@ -16,9 +15,7 @@ const Screen = ({
   className = '',
   title,
 }) => {
-  const dispatch = useDispatch()
-
-  useEffect(() => dispatch(layoutModel.actions.EndPageTransition()))
+  useEffect(layoutModel.trigger.endPageTransition)
   
   return (
     <div className={`fullscreen ${className}`}>

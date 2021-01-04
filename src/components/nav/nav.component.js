@@ -1,8 +1,7 @@
 import React, { useRef } from 'react'
-import { useSelector } from 'react-redux'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
 import { experiments, projects } from '@/src/data'
-import layoutModel from '@/src/models/layout.model'
+import * as layoutModel from '@/src/models/layout.model'
 import Link from '@/src/components/link'
 import Picture from '@/src/components/picture'
 import styles from './nav.component.module.css'
@@ -12,7 +11,7 @@ const OPACITY_0 = { opacity: 0 }
 const OPACITY_1 = { opacity: 1 }
 
 const Nav = () => {
-  const { navIsOpen } = useSelector(layoutModel.selectors.item)
+  const navIsOpen = layoutModel.select.navIsOpen()
   const bg1Ref = useRef()
   const bg1 = useSpring({
     ref: bg1Ref,

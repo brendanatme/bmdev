@@ -1,6 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import layoutModel from '@/src/models/layout.model'
+import * as layoutModel from '@/src/models/layout.model'
 import KeyHandler, { ESC } from '@/src/components/key-handler'
 import LiveIcon from '@/src/components/live-icon'
 import styles from './nav-toggle.component.module.css'
@@ -8,20 +7,19 @@ import styles from './nav-toggle.component.module.css'
 const KEYS = [ESC]
 
 const NavToggle = () => {
-  const { navIsOpen } = useSelector(layoutModel.selectors.item)
-  const dispatch = useDispatch()
+  const navIsOpen = layoutModel.select.navIsOpen()
   
   return (
     <>
       <KeyHandler
         handleFocusableElements
         handleKeys={KEYS}
-        onKeyEvent={() => navIsOpen ? dispatch(layoutModel.actions.CloseNav()) : null}
+        onKeyEvent={() => navIsOpen ? layoutModel.trigger.closeNav() : null}
       />
       <span className="fixed z-10 top-6 right-6 md:top-10 md:right-10">
         <button
           className={styles.object}
-          onClick={() => dispatch(layoutModel.actions.ToggleNav())}
+          onClick={layoutModel.trigger.toggleNav}
         >
           <LiveIcon
             color="white"

@@ -1,11 +1,10 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import layoutModel from '@/src/models/layout.model'
+import * as layoutModel from '@/src/models/layout.model'
 import LogoSvg from '@/src/svgs/logo.svg'
 import styles from './page-transition.component.module.css'
 
 const PageTransition = () => {
-  const { pageTransitionIsOpen } = useSelector(layoutModel.selectors.item)
+  const pageTransitionIsOpen = layoutModel.select.pageTransitionIsOpen()
   const state = pageTransitionIsOpen ? 'start' : 'end'
 
   return (

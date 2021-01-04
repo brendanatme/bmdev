@@ -1,23 +1,40 @@
-import { ReduxModel } from '@brendanatme/redux-model'
+/**
+ * layout.model
+ * 
+ * provide access to redux-like global data store (using pullstate)
+ * expose two properties:
+ * 
+ * - trigger
+ * - select
+ * 
+ * usage:
+ * 
+ * import * as layoutModel from '...'
+ * 
+ * // ... in component ...
+ * 
+ * const navIsOpen = layoutModel.select.navIsOpen()
+ * 
+ * <button onClick={() => layoutModel.trigger.closeNav()}>
+ *  Close Nav
+ * </button>
+ */
+import { Store } from 'pullstate'
 
-const layoutModel = new ReduxModel('layout', {
-  initialItem: {
-    navIsOpen: false,
-    pageTransitionIsOpen: true,
-  },
-  reducers: {
-    CLOSE_NAV: (state) => ({ ...state, item: { ...state.item, navIsOpen: false } }),
-    OPEN_NAV: (state) => ({ ...state, item: { ...state.item, navIsOpen: true } }),
-    TOGGLE_NAV: (state) => ({ ...state, item: { ...state.item, navIsOpen: !state.item.navIsOpen } }),
-    START_TRANSITION: (state) => ({ ...state, item: { ...state.item, pageTransitionIsOpen: true } }),
-    END_TRANSITION: (state) => ({ ...state, item: { ...state.item, pageTransitionIsOpen: false } }),
-  },
+const store = new Store({
+  navIsOpen: false,
+  pageTransitionIsOpen: true,
 })
 
-layoutModel.addAction('CloseNav', () => ({ type: layoutModel.ActionTypes.CLOSE_NAV }))
-layoutModel.addAction('OpenNav', () => ({ type: layoutModel.ActionTypes.OPEN_NAV }))
-layoutModel.addAction('ToggleNav', () => ({ type: layoutModel.ActionTypes.TOGGLE_NAV }))
-layoutModel.addAction('StartPageTransition', () => ({ type: layoutModel.ActionTypes.START_TRANSITION }))
-layoutModel.addAction('EndPageTransition', () => ({ type: layoutModel.ActionTypes.END_TRANSITION }))
+export const trigger = {
+  openNav: () => store.update((s) => { s.navIsOpen = true }),
+  closeNav: () => store.update((s) => { s.navIsOpen = false }),
+  toggleNav: () => store.update((s) => { s.navIsOpen = !s.navIsOpen }),
+  startPageTransition: () => store.update((s) => { s.pageTransitionIsOpen = true }),
+  endPageTransition: () => store.update((s) => { s.pageTransitionIsOpen = false }),
+}
 
-export default layoutModel
+export const select = {
+  navIsOpen: () => store.useState((s) => s.navIsOpen),
+  pageTransitionIsOpen: () => store.useState((s) => s.pageTransitionIsOpen),
+}
