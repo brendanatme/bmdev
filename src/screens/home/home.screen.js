@@ -106,7 +106,7 @@ const HomeScreen = () => {
                   <div
                     className={`relative p-5 z-10 bg-white ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
                   >
-                    <img className="z-10 flex-initial" src={client.thumb.img} style={{ width: client.thumb.w }} />
+                    <img className="z-10 flex-initial select-none" src={client.thumb.img} style={{ width: client.thumb.w }} />
                   </div>
                 </div>
               ))}
