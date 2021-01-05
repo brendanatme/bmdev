@@ -3,6 +3,7 @@ const StoriApp = {
   client: 'RCU - Responsible Cannabis Use',
   date: 'Sep. 2020',
   id: 'stori-app',
+  description: 'Stori app is a companion app for the Stori cannabis container. The app tracks your inventory and provides you with product details and offers.',
   images: {
     banner: {
       alt: 'Phones with Stori app',
@@ -71,6 +72,7 @@ const CanniknowWebsite = {
   client: 'RCU - Responsible Cannabis Use',
   date: 'Apr. 2020',
   id: 'canniknow-website',
+  desc: 'CanniKnow.com is TripAdvisor for cannabis. The website catalogs cannabis laws and other relevant details across North America and the world.',
   images: {
     banner: {
       alt: 'CanniKnow website homepage banner',
@@ -132,6 +134,7 @@ const CannedRetailApp = {
   client: 'RCU - Responsible Cannabis Use',
   date: 'Nov. 2019',
   id: 'canned-retail-app',
+  desc: 'CannEd Retail is a comprehensive cannabis customer education platform for retailers. An omni-channel offering, users can interact in-store or online.',
   images: {
     banner: {
       alt: 'CannedRetail app question',
@@ -142,6 +145,16 @@ const CannedRetailApp = {
       alt: 'CannedRetail app answer',
       sm: [{ src: '/projects/cannedretail_a@lg.png', type: 'png' }],
       lg: [{ src: '/projects/cannedretail_a@lg.png', type: 'png' }],
+    },
+    install: {
+      alt: 'CannedRetail app installation',
+      sm: [{ src: '/projects/cannedretail_install@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/cannedretail_install@lg.png', type: 'png' }],
+    },
+    portal: {
+      alt: 'CannedRetail embeddable portal',
+      sm: [{ src: '/projects/cannedretail_portal@lg.png', type: 'png' }],
+      lg: [{ src: '/projects/cannedretail_portal@lg.png', type: 'png' }],
     },
   },
   name: 'CannEd Retail app & widget',
@@ -161,23 +174,33 @@ CannedRetailApp.frames = [
     layout: 'TextLeftImageRight',
     contents: [
       CannedRetailApp.images.answer,
-      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CannEd Retail</span> is a comprehensive solution to cannabis customer education for retailers.</h2>
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CannEd Retail</span> is a comprehensive cannabis customer education platform for retailers.</h2>
       <p class="fade-in-slide-up-350">An omni-channel offering, users can interact in-store or online.</p>`
+    ],
+  },
+  {
+    layout: 'ImageLeftTextRight',
+    contents: [
+      CannedRetailApp.images.install,
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">The tablet app</span> solved a number of unique challenges.</h2>
+      <p class="fade-in-slide-up-350">It is built as a PWA with a seamless installation flow using React, leveraging bleeding-edge features.`,
+    ],
+  },
+  {
+    layout: 'TextLeftImageRight',
+    contents: [
+      CannedRetailApp.images.portal,
+      `<h2 class="fade-in-slide-up-300 mb-6">Retailers can also <span class="text-yellow-300">embed a portal</span> onto their website.</h2>
+      <p class="fade-in-slide-up-350">By copy/pasting one line of code, retailers have a responsive, fully-customizable embedded portal on their own website.`,
     ],
   },
   {
     layout: 'TextLeftTextRight',
     contents: [
-      `<h2 class="fade-in-slide-up-200">Turnaround: approximately <span class="text-yellow-300">one month</span></h2>`,
-      `<p class="fade-in-slide-up-250">Features:</p>
-      <ul class="fade-in-slide-up-300 mb-6">
-        <li>Custom age gate</li>
-        <li>Custom pages</li>
-        <li>A sprinkling of unobtrusive parallax</li>
-      </ul>
-      <p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer.</p>
+      '',
+      `<p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer, back-end developer, and dev-ops engineer.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://highlife.ca" target="_blank">
+        <a class="button" href="https://highlife.ca/pages/rcu/#/quizzes/basics" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -191,6 +214,7 @@ const HighlifeWebsite = {
   client: 'HighLife',
   date: 'Feb. 2019',
   id: 'highlife-website',
+  desc: 'HighLife.ca is this Sudbury retailer\'s online store. Built on Shopify, this slick design required a great deal of customization to fully realize the vision.',
   images: {
     banner: {
       alt: 'HighLife website homepage banner',
@@ -250,6 +274,7 @@ const FoglersWebsite = {
   client: 'Pixelcarve Inc.',
   date: '2013',
   id: 'fogler-rubinoff-website',
+  desc: 'This website was the first of its kind. Serving as a corporate directory and both an external and internal resource, the site won a gold Davey award in 2013 for its first-class UX.',
   images: {
     banner: {
       alt: 'Foglers.com website homepage',

@@ -13,6 +13,7 @@ import styles from './base.screen.module.css'
 const Screen = ({
   children,
   className = '',
+  description = '',
   title,
 }) => {
   useEffect(layoutModel.trigger.endPageTransition)
@@ -21,7 +22,7 @@ const Screen = ({
     <div className={`fullscreen ${className}`}>
       <Head>
         <title>{title} | bm.dev</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={description} />
       </Head>
       <div className={`fullscreen ${styles.bg}`} />
       {children}

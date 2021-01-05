@@ -17,7 +17,10 @@ import styles from './home.screen.module.css'
 
 const HomeScreen = () => {
   return (
-    <Screen title="Hello!">
+    <Screen
+      title="Hello!"
+      description="Hi, I'm Brendan. I'm an award-winning full-stack developer of nine years. I plan, create, and grow online products."
+    >
       <Carousel activeClass={styles.active}>
         <Frame>
           <div className="container p-6">
