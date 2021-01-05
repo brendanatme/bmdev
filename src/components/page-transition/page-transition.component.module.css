@@ -1,53 +1,32 @@
 @keyframes startBgTransition {
-  0% {
-    transform: rotateZ(15deg) translateY(160vh);
-    visibility: hidden;
-  }
-
-  100% {
-    transform: rotateZ(15deg) translateY(0);
-    visibility: visible;
-  }
+  0% { transform: rotateZ(15deg) translateY(160vh); visibility: hidden; }
+  100% { transform: rotateZ(15deg) translateY(0); visibility: visible; }
 }
 
 @keyframes endBgTransition {
-  0% {
-    transform: rotateZ(15deg) translateY(0);
-    visibility: visible;
-  }
-
-  100% {
-    transform: rotateZ(15deg) translateY(-160vh);
-    visibility: hidden;
-  }
+  0% { transform: rotateZ(15deg) translateY(0); visibility: visible; }
+  100% { transform: rotateZ(15deg) translateY(-160vh); visibility: hidden; }
 }
 
-@keyframes startLogoTransition {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    visibility: hidden;
-  }
+@keyframes startFade {
+  0% { opacity: 0; visibility: hidden; }
+  100% { opacity: 1; visibility: visible; }
+}
 
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    visibility: visible;
-  }
+@keyframes endFade {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
 }
 
 @keyframes endLogoTransition {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-    visibility: visible;
-  }
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
 
-  100% {
-    opacity: 0;
-    transform: scale(0);
-    visibility: hidden;
-  }
+@keyframes rotateChars {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .bg {
@@ -62,32 +41,37 @@
   z-index: 11;
 }
 
-.bg--start {
-  animation: startBgTransition 1s cubic-bezier(.76,.17,.08,.93) both;
-}
-
-.bg--end {
-  animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) .5s both;
-}
-
-.bg--initial {
-  animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) 2.5s both;
-}
+.bg--start { animation: startBgTransition 1s cubic-bezier(.76,.17,.08,.93) both; }
+.bg--end { animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) .5s both; }
+.bg--initial { animation: endBgTransition 1s cubic-bezier(.02,.78,.24,.98) 2.5s both; }
 
 .logo {
   fill: url('#icons_svg__logo-gradient') #31b8f3;
   height: 64px;
-  z-index: 11;
+  z-index: 12;
 }
 
-.logo--start {
-  animation: startLogoTransition 1s cubic-bezier(.76,.17,.08,.93) both;
+.logo--start { animation: startFade 0.75s cubic-bezier(.76,.17,.08,.93) 0.25s both; }
+.logo--end { animation: endFade 0.2s linear .1s both; }
+.logo--initial { animation: endFade 0.2s linear 2.1s both; }
+
+.text {
+  color: #1e72e0;
+  font-size: 16px;
+  height: 20px;
+  letter-spacing: 0.05em;
+  width: 78px;
+  z-index: 13;
 }
 
-.logo--end {
-  animation: endLogoTransition 1s cubic-bezier(.05,.95,.05,.95) .3s both;
-}
+.text--start { animation: startFade 0.75s cubic-bezier(.76,.17,.08,.93) 0.25s both; }
+.text--end { animation: endFade 0.2s linear .1s both; }
+.text--initial { animation: endFade 0.2s linear 2.1s both; }
 
-.logo--initial {
-  animation: endLogoTransition 1s cubic-bezier(.05,.95,.05,.95) 2.3s both;
-}
+.char0 { animation: rotateChars 3s linear 0.00s infinite; }
+.char1 { animation: rotateChars 3s linear 0.15s infinite; }
+.char2 { animation: rotateChars 3s linear 0.30s infinite; }
+.char3 { animation: rotateChars 3s linear 0.45s infinite; }
+.char4 { animation: rotateChars 3s linear 0.60s infinite; }
+.char5 { animation: rotateChars 3s linear 0.75s infinite; }
+.char6 { animation: rotateChars 3s linear 0.90s infinite; }
