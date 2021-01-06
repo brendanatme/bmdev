@@ -94,12 +94,12 @@ const Nav = () => {
       />
       <div className="absolute z-20 container p-5">
         <animated.h2 className="text-display-1" style={text0}>Menu</animated.h2>
-        <section className="my-10">
+        <section className="my-6 md:my-10">
           <animated.h3 className="text-display-2" style={text1}>Projects</animated.h3>
           <nav className="my-2">
-            <ul className="flex flex-wrap items-left h-32 md:h-64 lg:h-32">
+            <ul className="flex flex-wrap items-left h-48 md:h-64 lg:h-32">
               {tiles1((style, project) => (
-                <animated.li className="w-16 md:w-32 h-16 md:h-32 relative" style={style}>
+                <animated.li className="w-24 h-24 md:w-32 md:h-32 relative" style={style}>
                   <Link href={`/projects/${project.id}`}>
                     <Picture image={project.images.banner} only="sm" />
                   </Link>
@@ -108,13 +108,13 @@ const Nav = () => {
             </ul>
           </nav>
         </section>
-        <section className="my-10">
+        <section className="my-6 md:my-10">
           <animated.h3 className="text-display-2" style={text2}>Experiments</animated.h3>
           <nav className="my-2">
-            <ul className="flex flex-wrap items-left h-16 md:h-32">
+            <ul className="flex flex-wrap items-left h-24 md:h-32">
               {tiles2((style, experiment) => (
                 <animated.li
-                  className="relative w-16 md:w-32 h-16 md:h-32"
+                  className="relative w-24 h-24 md:w-32 md:h-32"
                   style={style}
                 >
                   <a href={experiment.url} target="_blank">
