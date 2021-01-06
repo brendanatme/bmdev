@@ -67,7 +67,7 @@ StoriApp.frames = [
   },
 ]
 
-const CanniknowWebsite = {
+const Canniknow = {
   thumbClient: 'RCU',
   client: 'RCU - Responsible Cannabis Use',
   date: 'Apr. 2020',
@@ -88,20 +88,20 @@ const CanniknowWebsite = {
   name: 'Cann I Know website',
 }
 
-CanniknowWebsite.frames = [
+Canniknow.frames = [
   {
     layout: 'Banner',
     contents: [
-      CanniknowWebsite.images.banner,
-      CanniknowWebsite.name,
-      CanniknowWebsite.client,
-      CanniknowWebsite.date,
+      Canniknow.images.banner,
+      Canniknow.name,
+      Canniknow.client,
+      Canniknow.date,
     ],
   },
   {
     layout: 'TextLeftImageRight',
     contents: [
-      CanniknowWebsite.images.location,
+      Canniknow.images.location,
       `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CanniKnow.com</span> is TripAdvisor for cannabis.</h2>
       <p class="fade-in-slide-up-350">The website catalogs cannabis laws and other relevant details across North America and the world.</p>`
     ],
@@ -129,7 +129,7 @@ CanniknowWebsite.frames = [
   },
 ]
 
-const CannedRetailApp = {
+const CannedRetail = {
   thumbClient: 'RCU',
   client: 'RCU - Responsible Cannabis Use',
   date: 'Nov. 2019',
@@ -160,20 +160,20 @@ const CannedRetailApp = {
   name: 'CannEd Retail app & widget',
 }
 
-CannedRetailApp.frames = [
+CannedRetail.frames = [
   {
     layout: 'Banner',
     contents: [
-      CannedRetailApp.images.banner,
-      CannedRetailApp.name,
-      CannedRetailApp.client,
-      CannedRetailApp.date,
+      CannedRetail.images.banner,
+      CannedRetail.name,
+      CannedRetail.client,
+      CannedRetail.date,
     ],
   },
   {
     layout: 'TextLeftImageRight',
     contents: [
-      CannedRetailApp.images.answer,
+      CannedRetail.images.answer,
       `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">CannEd Retail</span> is a comprehensive cannabis customer education platform for retailers.</h2>
       <p class="fade-in-slide-up-350">An omni-channel offering, users can interact in-store or online.</p>`
     ],
@@ -181,7 +181,7 @@ CannedRetailApp.frames = [
   {
     layout: 'ImageLeftTextRight',
     contents: [
-      CannedRetailApp.images.install,
+      CannedRetail.images.install,
       `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">The tablet app</span> solved a number of unique challenges.</h2>
       <p class="fade-in-slide-up-350">It is built as a PWA with a seamless installation flow using React, leveraging bleeding-edge features.`,
     ],
@@ -189,7 +189,7 @@ CannedRetailApp.frames = [
   {
     layout: 'TextLeftImageRight',
     contents: [
-      CannedRetailApp.images.portal,
+      CannedRetail.images.portal,
       `<h2 class="fade-in-slide-up-300 mb-6">Retailers can also <span class="text-yellow-300">embed a portal</span> onto their website.</h2>
       <p class="fade-in-slide-up-350">By copy/pasting one line of code, retailers have a responsive, fully-customizable embedded portal on their own website.`,
     ],
@@ -209,7 +209,7 @@ CannedRetailApp.frames = [
   },
 ]
 
-const HighlifeWebsite = {
+const Highlife = {
   thumbClient: 'HighLife',
   client: 'HighLife',
   date: 'Feb. 2019',
@@ -230,20 +230,20 @@ const HighlifeWebsite = {
   name: 'HighLife website',
 }
 
-HighlifeWebsite.frames = [
+Highlife.frames = [
   {
     layout: 'Banner',
     contents: [
-      HighlifeWebsite.images.banner,
-      HighlifeWebsite.name,
-      HighlifeWebsite.client,
-      HighlifeWebsite.date,
+      Highlife.images.banner,
+      Highlife.name,
+      Highlife.client,
+      Highlife.date,
     ],
   },
   {
     layout: 'TextLeftImageRight',
     contents: [
-      HighlifeWebsite.images.page,
+      Highlife.images.page,
       `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">HighLife.ca</span> is this Sudbury retailer's online store.</h2>
       <p class="fade-in-slide-up-350">Built on Shopify, this slick design required a great deal of customization to fully realize the vision.</p>`
     ],
@@ -269,7 +269,7 @@ HighlifeWebsite.frames = [
   },
 ]
 
-const FoglersWebsite = {
+const Foglers = {
   thumbClient: 'Pixelcarve',
   client: 'Pixelcarve Inc.',
   date: '2013',
@@ -295,20 +295,20 @@ const FoglersWebsite = {
   name: 'Fogler Rubinoff website',
 }
 
-FoglersWebsite.frames = [
+Foglers.frames = [
   {
     layout: 'Banner',
     contents: [
-      FoglersWebsite.images.banner,
-      FoglersWebsite.name,
-      FoglersWebsite.client,
-      FoglersWebsite.date,
+      Foglers.images.banner,
+      Foglers.name,
+      Foglers.client,
+      Foglers.date,
     ],
   },
   {
     layout: 'TextLeftImageRight',
     contents: [
-      FoglersWebsite.images.search,
+      Foglers.images.search,
       `<h2 class="fade-in-slide-up-300 mb-6">This website was <span class="text-yellow-300">the first</span> of its kind.</h2>
       <p class="fade-in-slide-up-350">Serving as a corporate directory and both an external and internal resource, the site won a gold Davey award in 2013 for its first-class UX.</p>`
     ],
@@ -316,7 +316,7 @@ FoglersWebsite.frames = [
   {
     layout: 'ImageLeftTextRight',
     contents: [
-      FoglersWebsite.images.scroller,
+      Foglers.images.scroller,
       `<h2 class="fade-in-slide-up-300 text-yellow-300">Features</h2>
       <ul class="fade-in-slide-up-350">
         <li>Real-time sync with search and navigation</li>
@@ -332,7 +332,7 @@ FoglersWebsite.frames = [
       `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">six months</span> by two developers.</h2>`,
       `<p class="fade-in-slide-up-350 mb-10">I was the sole front-end developer for the project.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://www.canniknow.com" target="_blank">
+        <a class="button" href="http://folgers.com" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -343,8 +343,8 @@ FoglersWebsite.frames = [
 
 export default [
   StoriApp,
-  CanniknowWebsite,
-  CannedRetailApp,
-  HighlifeWebsite,
-  FoglersWebsite,
+  Canniknow,
+  CannedRetail,
+  Highlife,
+  Foglers,
 ]
