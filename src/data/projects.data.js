@@ -332,7 +332,7 @@ Foglers.frames = [
       `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">six months</span> by two developers.</h2>`,
       `<p class="fade-in-slide-up-350 mb-10">I was the sole front-end developer for the project.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="http://folgers.com" target="_blank">
+        <a class="button" href="http://foglers.com" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
