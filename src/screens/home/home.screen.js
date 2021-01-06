@@ -22,7 +22,7 @@ const HomeScreen = () => {
       description="Hi, I'm Brendan. I'm an award-winning full-stack developer of nine years. I plan, create, and grow online products."
     >
       <Carousel activeClass={styles.active}>
-        <Frame>
+        <Frame key="frame0">
           <div className="container p-6">
             <div className="max-w-lg text-white">
               <h1>
@@ -34,7 +34,7 @@ const HomeScreen = () => {
             </div>
           </div>
         </Frame>
-        <Frame>
+        <Frame key="frame1">
           <Title>Expertise</Title>
           <div className="container p-6 text-white">
             <p className="font-sans text-md md:text-xl mb-8 md:mb-20 md:-mt-20 max-w-xl fade-in-slide-up-250">
@@ -71,7 +71,7 @@ const HomeScreen = () => {
             </div>
           </div>
         </Frame>
-        <Frame>
+        <Frame key="frame2">
           <Title>Featured <span className="sm:br" />Projects</Title>
           
           <Carousel
@@ -79,8 +79,8 @@ const HomeScreen = () => {
             nextArrow={false}
             overflow
           >
-            {projects.map((project, i) => (
-              <div className="fill flex items-center justify-center" key={i}>
+            {projects.map((project) => (
+              <div className="fill flex items-center justify-center" key={project.id}>
                 <Link href={`/projects/${project.id}`}>
                   <div className={`${styles.project} rounded`}>
                     <Picture className={styles.projectBg} image={project.images.banner} />
@@ -97,7 +97,7 @@ const HomeScreen = () => {
             ))}
           </Carousel>
         </Frame>
-        <Frame>
+        <Frame key="frame3">
           <Title>Clients &amp; <span className="sm:br" />Employers</Title>
           <div className="container p-6 text-white">
             <div className="flex flex-wrap justify-evenly">
@@ -116,7 +116,7 @@ const HomeScreen = () => {
             </div>
           </div>
         </Frame>
-        <Frame>
+        <Frame key="frame4">
           <Title>Get in touch</Title>
           <div className="container p-6 text-white text-center">
             <p className="text-display-2 my-5 max-w-xl mx-auto mb-8 md:mb-20 fade-in-slide-up-200">

@@ -17,7 +17,7 @@ const ProjectScreen = ({ project }) => {
     >
       <Carousel>
         {project.frames.map((frame, i) => (
-          <ContentFrame {...frame} key={`frame${i}`} />
+          <ContentFrame {...frame} key={`${project.name}${i}`} />
         ))}
       </Carousel>
     </Screen>

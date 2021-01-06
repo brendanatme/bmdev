@@ -7,7 +7,7 @@
  */
 import clamp from 'lodash.clamp'
 import { useEffect, useRef, useState } from 'react'
-import { useGesture, useWheel } from 'react-use-gesture'
+import { useGesture } from 'react-use-gesture'
 import { animated, useSpring, useSprings } from '@react-spring/web'
 import { useScreen } from '@brendanatme/react-utils/hooks'
 import Delayed from 'react-delayed'
@@ -35,14 +35,14 @@ const Carousel = ({
   activeClass,
   axis = 'y',
   children,
+  id,
   nextArrow = true,
   overflow = false,
 }) => {
   const hasDragged = useRef(false)
   const dirKey = DIR_MAP[axis]
   const index = useRef(0)
-  const [si, setSi] = useState(index.current)
-  const ignoreWheel = useRef(false)
+  const [, setSi] = useState(index.current)
   const [atEnd, setAtEnd] = useState(false)
   const [isGrabbing, setIsGrabbing] = useState(false)
   const { h, w } = useScreen()
@@ -72,37 +72,18 @@ const Carousel = ({
     }
   }
 
+  /**
+   * when the children change, return to slide 0 and re-render
+   */
+  useEffect(() => {
+    setIndex(0)
+    setSprings((i) => calcByAxis(i, index.current))
+  }, [children[0].key])
+
   useEffect(() => setSprings((i) => calcByAxis(
     i,
     index.current,
   )), [dim])
-
-  const bindWheel = useWheel(({
-    direction,
-    distance,
-  }) => {
-    if (ignoreWheel.current) {
-      return
-    }
-
-    const dir = direction[dirKey] > 0 ? 1 : -1
-    const crossedThreshold = distance > 35
-
-    if (crossedThreshold) {
-      setIndex(index.current + dir)
-      ignoreWheel.current = true
-
-      setTimeout(() => {
-        ignoreWheel.current = false
-      }, 333)
-    }
-
-    setSprings((i) => calcByAxis(
-      i,
-      index.current,
-      !ignoreWheel.current ? -((dir * distance) / 2) : 0
-    ))
-  })
 
   const bind = useGesture(
     {
@@ -173,7 +154,7 @@ const Carousel = ({
   const handleKeyPress = (key) => key === DOWN_ARROW || key === RIGHT_ARROW ? next() : prev()
 
   return (
-    <div className={`${styles.carousel} ${styles[axis]} fullscreen`} {...bindWheel()}>
+    <div className={`${styles.carousel} ${styles[axis]} fullscreen`}>
       <KeyHandler
         handleKeys={ARROWS[axis]}
         onKeyEvent={handleKeyPress}

@@ -10,7 +10,7 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;700&display=swap" rel="stylesheet" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
