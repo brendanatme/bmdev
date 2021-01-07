@@ -35,9 +35,9 @@ const Carousel = ({
   activeClass,
   axis = 'y',
   children,
-  id,
   nextArrow = true,
   overflow = false,
+  tabIndex = null,
 }) => {
   const hasDragged = useRef(false)
   const dirKey = DIR_MAP[axis]
@@ -175,9 +175,11 @@ const Carousel = ({
 
       {nextArrow ? (
         <animated.button
-          className={styles.nextBtn}
+          aria-label="Next Slide"
+          className={`focusable ${styles.nextBtn}`}
           onClick={next}
           style={nextBtnSpring}
+          tabIndex={tabIndex}
         >
           <Delayed mounted mountAfter={3000}>
             <LiveIcon color="white" hover={!atEnd} type="DownArrow" />

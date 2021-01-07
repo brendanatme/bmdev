@@ -90,3 +90,7 @@ rendered as raw html so define class globally
 .button:active {
   transform: translateY(2px);
 }
+
+.focusable:focus {
+  outline: 2px solid #fbf76b !important;
+}

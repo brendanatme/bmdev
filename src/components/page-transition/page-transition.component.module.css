@@ -38,7 +38,6 @@
   transform: rotateZ(15deg) translateY(0);
   visibility: visible;
   width: 160vw;
-  z-index: 11;
 }
 
 .bg--start { animation: startBgTransition 1s cubic-bezier(.76,.17,.08,.93) both; }
@@ -48,7 +47,6 @@
 .logo {
   fill: url('#icons_svg__logo-gradient') #31b8f3;
   height: 64px;
-  z-index: 12;
 }
 
 .logo--start { animation: startFade 0.75s cubic-bezier(.76,.17,.08,.93) 0.25s both; }
@@ -61,7 +59,6 @@
   height: 20px;
   letter-spacing: 0.05em;
   width: 78px;
-  z-index: 13;
 }
 
 .text--start { animation: startFade 0.75s cubic-bezier(.76,.17,.08,.93) 0.25s both; }

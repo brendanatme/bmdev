@@ -21,7 +21,10 @@ const HomeScreen = () => {
       title="Hello!"
       description="Hi, I'm Brendan. I'm an award-winning full-stack developer of nine years. I plan, create, and grow online products."
     >
-      <Carousel activeClass={styles.active}>
+      <Carousel
+        activeClass={styles.active}
+        tabIndex="2"
+      >
         <Frame key="frame0">
           <div className="container p-6">
             <div className="max-w-lg text-white">
@@ -109,7 +112,12 @@ const HomeScreen = () => {
                   <div
                     className={`relative p-5 z-10 bg-white ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
                   >
-                    <img className="z-10 flex-initial select-none" src={client.thumb.img} style={{ width: client.thumb.w }} />
+                    <img
+                      alt={client.thumb.alt}
+                      className="z-10 flex-initial select-none"
+                      src={client.thumb.img}
+                      style={{ width: client.thumb.w }}
+                    />
                   </div>
                 </div>
               ))}
@@ -125,11 +133,12 @@ const HomeScreen = () => {
             <div className="flex flex-wrap justify-center">
               {socials.map((social, i) => (
                 <a
-                  className={`${social.anim} ${styles.social} relative m-2 py-2 px-5 md:m-5 md:py-5 md:px-10 bg-white bg-opacity-20 rounded overflow-hidden`}
+                  className={`focusable ${social.anim} ${styles.social} relative m-2 py-2 px-5 md:m-5 md:py-5 md:px-10 bg-white bg-opacity-20 rounded overflow-hidden`}
                   href={social.href}
                   key={`social${i}`}
                   target="_blank"
                 >
+                  <span className="sr-only">{social.type}</span>
                   <SvgIcon
                     className="fill-current"
                     type={social.type}

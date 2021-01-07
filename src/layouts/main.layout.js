@@ -6,13 +6,13 @@ import PageTransition from '@/src/components/page-transition'
 
 const MainLayout = ({ children }) => (
   <div className="layout layout--main">
-    <main className="main">
+    <Logo className="z-20" tabIndex="0" />
+    <NavToggle className="z-20" tabIndex="0" />
+    <Nav className="z-10" />
+    <main className="main z-0">
       {children}
     </main>
-    <Nav />
-    <Logo />
-    <NavToggle />
-    <PageTransition />
+    <PageTransition className="z-30" />
   </div>
 )
 

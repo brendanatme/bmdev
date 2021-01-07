@@ -10,7 +10,9 @@ const EMPTY_ARRAY = []
 const OPACITY_0 = { opacity: 0 }
 const OPACITY_1 = { opacity: 1 }
 
-const Nav = () => {
+const Nav = ({
+  className = '',
+}) => {
   const navIsOpen = layoutModel.select.navIsOpen()
   const bg1Ref = useRef()
   const bg1 = useSpring({
@@ -83,7 +85,7 @@ const Nav = () => {
   )
   
   return (
-    <div className={`fullscreen flex items-center justify-center text-white z-10 ${styles[navIsOpen ? 'open' : 'closed']}`}>
+    <div className={`${className} fullscreen flex items-center justify-center text-white ${styles[navIsOpen ? 'open' : 'closed']}`}>
       <animated.div
         className="fullscreen bg-dblue z-0 opacity-70"
         style={bg1}
@@ -96,11 +98,11 @@ const Nav = () => {
         <animated.h2 className="text-display-1" style={text0}>Menu</animated.h2>
         <section className="my-6 md:my-10">
           <animated.h3 className="text-display-2" style={text1}>Projects</animated.h3>
-          <nav className="my-2">
+          <nav className="my-2" aria-label="Projects">
             <ul className="flex flex-wrap items-left h-48 md:h-64 lg:h-32">
               {tiles1((style, project) => (
                 <animated.li className="w-24 h-24 md:w-32 md:h-32 relative" style={style}>
-                  <Link href={`/projects/${project.id}`}>
+                  <Link className="block fill" href={`/projects/${project.id}`} tabIndex="0">
                     <Picture image={project.images.banner} only="sm" />
                   </Link>
                 </animated.li>
@@ -110,14 +112,14 @@ const Nav = () => {
         </section>
         <section className="my-6 md:my-10">
           <animated.h3 className="text-display-2" style={text2}>Experiments</animated.h3>
-          <nav className="my-2">
+          <nav className="my-2" aria-label="Experiments">
             <ul className="flex flex-wrap items-left h-24 md:h-32">
               {tiles2((style, experiment) => (
                 <animated.li
                   className="relative w-24 h-24 md:w-32 md:h-32"
                   style={style}
                 >
-                  <a href={experiment.url} target="_blank">
+                  <a className="block fill focusable" href={experiment.url} target="_blank">
                     <Picture image={experiment.images.thumb} only="sm" />
                   </a>
                 </animated.li>

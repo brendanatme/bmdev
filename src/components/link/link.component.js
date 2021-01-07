@@ -12,15 +12,22 @@
  * ideally we could just hook into the router,
  * but we don't have any "before" hook
  */
+import { useState } from 'react'
 import useRouter from 'next/router'
 import { wait } from '@brendanatme/utils'
+import KeyHandler, { ENTER } from '@/src/components/key-handler'
 import * as layoutModel from '@/src/models/layout.model'
+
+const KEYS = [ENTER]
+const NOOP = () => null
 
 const Link = ({
   children,
   className = '',
   href,
+  tabIndex = null,
 }) => {
+  const [isFocused, setFocus] = useState(false)
   const router = useRouter
   const navIsOpen = layoutModel.select.navIsOpen()
 
@@ -41,7 +48,18 @@ const Link = ({
   }
 
   return (
-    <span className={`cursor-pointer ${className}`} onClick={handleClick}>
+    <span
+      className={`focusable cursor-pointer ${className}`}
+      onBlur={() => setFocus(false)}
+      onClick={handleClick}
+      onFocus={() => setFocus(true)}
+      tabIndex={tabIndex}
+    >
+      <KeyHandler
+        handleFocusableElements
+        handleKeys={KEYS}
+        onKeyEvent={isFocused ? handleClick : NOOP}
+      />
       {children}
     </span>
   )

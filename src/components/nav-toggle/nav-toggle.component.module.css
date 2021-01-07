@@ -5,7 +5,7 @@
   box-shadow: none;
   cursor: pointer;
   height: 40px;
-  outline: none !important;
+  outline: none;
   padding: 0;
   position: absolute;
   right: 0;

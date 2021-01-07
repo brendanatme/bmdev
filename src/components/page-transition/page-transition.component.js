@@ -5,7 +5,9 @@ import styles from './page-transition.component.module.css'
 
 const text = ['L', 'O', 'A', 'D', 'I', 'N', 'G']
 
-const PageTransition = () => {
+const PageTransition = ({
+  className = '',
+}) => {
   const pageTransitionIsOpen = layoutModel.select.pageTransitionIsOpen()
   const initialLoad = layoutModel.select.initialLoad()
   const state = initialLoad
@@ -16,9 +18,9 @@ const PageTransition = () => {
 
   return (
     <>
-      <div className={`${styles.bg} ${styles[`bg--${state}`]}`} />
-      <LogoSvg className={`${styles.logo} ${styles[`logo--${state}`]} fixed m-auto inset-0`} />
-      <div className={`${styles.text} ${styles[`text--${state}`]} fixed m-auto top-24 inset-0`}>
+      <div className={`${className} ${styles.bg} ${styles[`bg--${state}`]}`} />
+      <LogoSvg className={`${className} ${styles.logo} ${styles[`logo--${state}`]} fixed m-auto inset-0`} />
+      <div className={`${className} ${styles.text} ${styles[`text--${state}`]} fixed m-auto top-24 inset-0`}>
         {text.map((char, i) => (
           <span className={`inline-block opacity-0 ${styles[`char${i}`]}`} key={char}>{char}</span>
         ))}
