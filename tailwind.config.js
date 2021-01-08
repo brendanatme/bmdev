@@ -31,8 +31,11 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
-    }
+      },
+      screens: {
+        xs: '360px',
+      },
+    },
   },
   variants: {},
   plugins: [],

@@ -58,7 +58,7 @@ StoriApp.frames = [
       `<h2 class="fade-in-slide-up-300">The app was built in approximately <span class="text-yellow-300">two months</span> by two developers.</h2>`,
       `<p class="fade-in-slide-up-350 mb-10">My roles in the project were Project Lead, Lead Back-End Developer, Front-End Developer, and Lead DevOps Engineer.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://app.yourstori.com" target="_blank">
+        <a class="button focusable" href="https://app.yourstori.com" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -120,7 +120,7 @@ Canniknow.frames = [
       `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">two months</span> by one developer.</h2>`,
       `<p class="fade-in-slide-up-350 mb-10">I was the sole developer and dev-ops engineer.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://www.canniknow.com" target="_blank">
+        <a class="button focusable" href="https://www.canniknow.com" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -200,7 +200,7 @@ CannedRetail.frames = [
       '',
       `<p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer, back-end developer, and dev-ops engineer.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://highlife.ca/pages/rcu/#/quizzes/basics" target="_blank">
+        <a class="button focusable" href="https://highlife.ca/pages/rcu/#/quizzes/basics" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -260,7 +260,7 @@ Highlife.frames = [
       </ul>
       <p class="fade-in-slide-up-350 mb-10">Role: sole front-end developer.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="https://highlife.ca" target="_blank">
+        <a class="button focusable" href="https://highlife.ca" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>
@@ -332,7 +332,7 @@ Foglers.frames = [
       `<h2 class="fade-in-slide-up-300">The site was built in approximately <span class="text-yellow-300">six months</span> by two developers.</h2>`,
       `<p class="fade-in-slide-up-350 mb-10">I was the sole front-end developer for the project.</p>
       <p class="fade-in-slide-up-400">
-        <a class="button" href="http://foglers.com" target="_blank">
+        <a class="button focusable" href="http://foglers.com" target="_blank">
           <span class="button__label">Visit Project</span>
           <span class="button__hover-label">Visit Project</span>
         </a>

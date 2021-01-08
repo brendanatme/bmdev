@@ -12,6 +12,7 @@
     "@brendanatme/react-utils": "^2.1.3",
     "@brendanatme/utils": "^1.2.0",
     "core-js": "^3.7.0",
+    "focus-visible": "^5.2.0",
     "lodash.clamp": "^4.0.3",
     "next": "9.5.5",
     "pullstate": "^1.20.5",

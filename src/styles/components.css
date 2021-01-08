@@ -92,5 +92,9 @@ rendered as raw html so define class globally
 }
 
 .focusable:focus {
+  outline: none;
+}
+
+.focusable.focus-visible {
   outline: 2px solid #fbf76b !important;
 }

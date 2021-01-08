@@ -1,0 +1,69 @@
+.project {
+  box-shadow: 0 0 40px rgba(0,0,0,0.15);
+  height: 67vh;
+  width: 50vw;
+}
+@media only screen and (min-width: 769px) {
+  .project {
+    height: 36vh;
+    width: 33vw;
+  }
+}
+.project:active { transform: translateY(3px); }
+.project:hover { cursor: pointer; }
+
+.bg { transition: transform .333s ease-out; }
+.project:hover .bg { transform: scale(1.05); }
+@media only screen and (max-width: 768px) {
+  .bg { transform: scale(1.05); }
+}
+
+.overlay {
+  background: rgba(80, 80, 80, 0.5);
+  opacity: 0;
+  transition: opacity .333s;
+}
+.project:hover .overlay { opacity: 1; }
+.project:active .overlay { opacity: 0.8; }
+@media only screen and (max-width: 768px) {
+  .overlay { opacity: 1; }
+}
+
+.metaBg {
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: transform .5s cubic-bezier(0.01, 0.92, 0.12, 0.97);
+}
+.project:hover .metaBg { transform: scaleY(1); }
+@media only screen and (max-width: 768px) {
+  .metaBg { transform: scaleY(1); }
+}
+
+.name,
+.client,
+.date {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .15s linear, transform .25s cubic-bezier(0.06, 0.49, 0.4, 0.95);
+}
+
+.project:hover .name,
+.project:hover .client,
+.project:hover .date {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.project:hover .name { transition: opacity .5s linear .25s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .25s; }
+.project:hover .client { transition: opacity .5s linear .30s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .30s; }
+.project:hover .date { transition: opacity .5s linear .35s, transform .5s cubic-bezier(0.06, 0.49, 0.4, 0.95) .35s; }
+
+@media only screen and (max-width: 768px) {
+  .name,
+  .client,
+  .date {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: none;
+  }
+}

@@ -20,7 +20,7 @@ const PageTransition = ({
     <>
       <div className={`${className} ${styles.bg} ${styles[`bg--${state}`]}`} />
       <LogoSvg className={`${className} ${styles.logo} ${styles[`logo--${state}`]} fixed m-auto inset-0`} />
-      <div className={`${className} ${styles.text} ${styles[`text--${state}`]} fixed m-auto top-24 inset-0`}>
+      <div className={`${className} ${styles.text} ${styles[`text--${state}`]} fixed m-auto inset-0`}>
         {text.map((char, i) => (
           <span className={`inline-block opacity-0 ${styles[`char${i}`]}`} key={char}>{char}</span>
         ))}

@@ -3,6 +3,16 @@ body {
   overscroll-behavior: none;
 }
 
+/*
+  shrink the base font size on the smallest phone screens
+  so that the layouts can all fit
+*/
+@media only screen and (max-width: 359px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 .svg_icons__hidden {
   display: none;
 }
