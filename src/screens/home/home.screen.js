@@ -4,6 +4,7 @@
  * use 3d carousel to transition "frames"
  * (sections within screen)
  */
+import { useEffect, useState } from 'react'
 import { clients, projects, socials } from '@/src/data'
 import Frame from '@/src/base/frame'
 import Screen from '@/src/base/screen'
@@ -14,6 +15,13 @@ import Project from './project'
 import styles from './home.screen.module.css'
 
 const HomeScreen = () => {
+  const [socialHover, setSocialHover] = useState(-1);
+  const [hasHovered, setHasHovered] = useState(false);
+  
+  useEffect(() => {
+    socialHover && setHasHovered(true);
+  }, [socialHover]);
+
   return (
     <Screen
       title="Hello!"
@@ -121,12 +129,16 @@ const HomeScreen = () => {
             <p className="text-display-2 my-5 max-w-xl mx-auto mb-8 md:mb-20 fade-in-slide-up-200">
               If you're looking to collaborate, need someone to implement your vision, or just wanna say "hi", let's connect.
             </p>
-            <div className="flex flex-wrap justify-center">
+            <div
+              className={`${socialHover > -1 ? styles['socialGroupHover' + socialHover] : ''} ${hasHovered ? styles.hasHovered : ''} flex flex-wrap justify-center`}
+              onMouseLeave={() => setSocialHover(-1)}
+            >
               {socials.map((social, i) => (
                 <a
-                  className={`focusable ${social.anim} ${styles.social} relative m-2 p-1 xs:py-2 xs:px-5 md:m-5 md:py-5 md:px-10 bg-white bg-opacity-20 rounded overflow-hidden`}
+                  className={`${styles.social} ${styles['social' + i]} ${styles[socialHover === i ? 'socialHover' : 'socialNotHover']} focusable m-2 p-1 xs:py-2 xs:px-5 md:m-5 md:py-5 md:px-10`}
                   href={social.href}
                   key={`social${i}`}
+                  onMouseEnter={() => setSocialHover(i)}
                   target="_blank"
                 >
                   <span className="sr-only">{social.type}</span>
@@ -144,7 +156,7 @@ const HomeScreen = () => {
               ))}
             </div>
           </div>
-          <div class="absolute bottom-0 left-0 p-6 w-full z-20 fade-in-slide-up-400">
+          <div className="absolute bottom-0 left-0 p-6 w-full z-20 fade-in-slide-up-400">
             <p className="text-sm text-white opacity-60">"Expertise" icons created by corpus delicti, Serhii Smirnov, and Mochammad Kafi from the Noun Project.</p>
           </div>
         </Frame>

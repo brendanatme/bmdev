@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className="layout layout--main">
-      <a class="sr-only" href="#content">Skip to content</a>
+      <a className="sr-only" href="#content">Skip to content</a>
       <Logo className="z-20" tabIndex="0" />
       <NavToggle className="z-20" tabIndex="0" />
       <Nav className="z-10" />

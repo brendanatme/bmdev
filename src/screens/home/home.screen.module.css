@@ -19,8 +19,12 @@
 }
 
 .social {
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 0.25rem;
   color: rgba(0, 141, 195, 0.4);
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 .socialMask {
@@ -34,4 +38,38 @@
 
 .social:active {
   transform: translateY(3px);
+}
+
+.social0 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-5deg) translateY(200px); }
+.social1 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(0deg) translateY(200px); }
+.social2 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(5deg) translateY(200px); }
+
+.active .social0 { opacity: 1; transition: opacity 1s linear .30s, transform 1s cubic-bezier(.02,.78,.24,.98) .30s; transform: rotate(-5deg) translateY(8px); }
+.active .social1 { opacity: 1; transition: opacity 1s linear .35s, transform 1s cubic-bezier(.02,.78,.24,.98) .35s; transform: rotate(0deg) translateY(0px); }
+.active .social2 { opacity: 1; transition: opacity 1s linear .40s, transform 1s cubic-bezier(.02,.78,.24,.98) .40s; transform: rotate(5deg) translateY(8px); }
+
+/* .social0 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(-12deg) translateY(260px); }
+.social4 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(10deg) translateY(248px); }
+.active .social0 { opacity: 1; transition: opacity 1s linear .25s, transform 1s cubic-bezier(.02,.78,.24,.98) .25s; transform: rotate(-12deg) translateY(60px); }
+.active .social4 { opacity: 1; transition: opacity 1s linear .45s, transform 1s cubic-bezier(.02,.78,.24,.98) .45s; transform: rotate(10deg) translateX(-18px) translateY(-90px); } */
+
+.active .hasHovered .social0 { transition: transform 1s cubic-bezier(.02,.78,.24,.98); }
+.active .hasHovered .social1 { transition: transform 1s cubic-bezier(.02,.78,.24,.98); }
+.active .hasHovered .social2 { transition: transform 1s cubic-bezier(.02,.78,.24,.98); }
+
+.active .socialGroupHover1.hasHovered .social0.socialNotHover,
+.active .socialGroupHover2.hasHovered .social0.socialNotHover {
+  transition: transform 1s cubic-bezier(.02,.78,.24,.98); transform: rotate(-10deg) translateX(-30px) translateY(15px);
+}
+
+.active .socialGroupHover0.hasHovered .social1.socialNotHover {
+  transition: transform 1s cubic-bezier(.02,.78,.24,.98); transform: rotate(1deg) translateX(15px) translateY(1px);
+}
+.active .socialGroupHover2.hasHovered .social1.socialNotHover {
+  transition: transform 1s cubic-bezier(.02,.78,.24,.98); transform: rotate(-1deg) translateX(-15px) translateY(1px);
+}
+
+.active .socialGroupHover0 .social2.socialNotHover,
+.active .socialGroupHover1 .social2.socialNotHover {
+  transition: transform 1s cubic-bezier(.02,.78,.24,.98); transform: rotate(10deg) translateX(30px) translateY(15px);
 }

@@ -9,5 +9,16 @@ export default [
       },
     },
     url: 'http://vdm.brendanat.me',
-  }
+  },
+  {
+    id: 'txtcalc',
+    images: {
+      thumb: {
+        alt: 'TXTCalc Logo',
+        sm: [{ src: '/experiments/txtcalc.svg', type: 'svg' }],
+        lg: [{ src: '/experiments/txtcalc.svg', type: 'svg' }],
+      },
+    },
+    url: 'https://txtcalc.brendanm.dev',
+  },
 ]
