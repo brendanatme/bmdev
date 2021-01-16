@@ -19,7 +19,9 @@ const HomeScreen = () => {
   const [hasHovered, setHasHovered] = useState(false);
   
   useEffect(() => {
-    socialHover && setHasHovered(true);
+    if (socialHover >= 0 && !hasHovered) {
+      setHasHovered(true);
+    }
   }, [socialHover]);
 
   return (
