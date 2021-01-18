@@ -32,7 +32,7 @@ const ARROWS = {
 const DIR_MAP = { x: 0, y: 1 }
 
 const Carousel = ({
-  activeClass,
+  activeClass = '',
   axis = 'y',
   children,
   nextArrow = true,

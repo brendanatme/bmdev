@@ -11,8 +11,30 @@ import Screen from '@/src/base/screen'
 import Carousel from '@/src/components/carousel'
 import Title from '@/src/components/title'
 import SvgIcon from '@/src/components/svg-icon'
+import IconWithText from './icon-with-text'
 import Project from './project'
 import styles from './home.screen.module.css'
+
+const expertisePoints = [
+  {
+    className: 'fade-in-slide-up-300',
+    icon: 'UserPhone',
+    heading: ['User', 'Experience'],
+    text: 'Delighting users and differentiating products through careful, attentive interaction design and development',
+  },
+  {
+    className: 'fade-in-slide-up-350',
+    icon: 'Architecture',
+    heading: ['Software', 'Development'],
+    text: 'Creating extensible software ready to handle evolving business needs&mdash;and the workflows to scale it',
+  },
+  {
+    className: 'fade-in-slide-up-400',
+    icon: 'Networking',
+    heading: ['System', 'Design'],
+    text: 'Connecting the many moving components of an online business in a way that provides security, resilliency, and scalability',
+  },
+]
 
 const HomeScreen = () => {
   const [socialHover, setSocialHover] = useState(-1);
@@ -52,42 +74,7 @@ const HomeScreen = () => {
               I specialize in (some of) the work that goes into building a successful web app, platform, product, or service:
             </p>
             <div className="md:flex md:justify-evenly">
-              <div className="my-2 md:w-1/3 md:pr-20 fade-in-slide-up-300">
-                <div className="flex md:block">
-                  <SvgIcon
-                    className="square-80 xs:square-100 fill-current text-yellow-300 ml-2 mr-2 md:ml-0"
-                    type="UserPhone"
-                  />
-                  <h3 className="mt-2 md:mt-1 font-sans font-medium text-2xl md:text-3xl">User<br />Experience</h3>
-                </div>
-                <p className="hidden md:block text-display-3 my-5">
-                  Delighting users and differentiating products through careful, attentive interaction design and development
-                </p>
-              </div>
-              <div className="my-2 md:w-1/3 md:pr-20 fade-in-slide-up-350">
-                <div className="flex md:block">
-                  <SvgIcon
-                    className="square-80 xs:square-100 fill-current text-yellow-300 ml-2 mr-2 md:ml-0"
-                    type="Architecture"
-                  />
-                  <h3 className="mt-2 md:mt-1 font-sans font-medium text-2xl md:text-3xl">Software<br />Development</h3>
-                </div>
-                <p className="hidden md:block text-display-3 my-5">
-                  Creating extensible software ready to handle evolving business needs&mdash;and the workflows to scale it
-                </p>
-              </div>
-              <div className="my-2 md:w-1/3 fade-in-slide-up-400">
-                <div className="flex md:block">
-                  <SvgIcon
-                    className="square-80 xs:square-100 fill-current text-yellow-300 ml-2 mr-2 md:ml-0"
-                    type="Networking"
-                  />
-                  <h3 className="mt-2 md:mt-1 font-sans font-medium text-2xl md:text-3xl">System<br />Design</h3>
-                </div>
-                <p className="hidden md:block text-display-3 my-5">
-                  Connecting the many moving components of an online business in a way that provides security, resilliency, and scalability
-                </p>
-              </div>
+              {expertisePoints.map((point) => (<IconWithText {...point} key={point.text} />))}
             </div>
           </div>
         </Frame>
@@ -107,7 +94,7 @@ const HomeScreen = () => {
             <div className="flex flex-wrap justify-evenly">
               {clients.map((client, i) => (
                 <div
-                  className={`block m-5 relative z-10 ${styles.client} ${styles['client' + i]} flex flex-col rounded overflow-hidden`}
+                  className={`block m-5 relative z-10 ${styles['client' + i]} flex flex-col rounded overflow-hidden`}
                   key={`client${i}`}
                 >
                   <div
