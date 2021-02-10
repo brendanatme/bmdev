@@ -1,5 +1,5 @@
-import ProjectScreen from '@/src/screens/project'
-import { projects } from '@/src/data'
+import ProjectScreen from '~/src/screens/project'
+import { projects } from '~/src/data'
 
 export default ProjectScreen
 

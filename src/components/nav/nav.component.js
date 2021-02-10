@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
-import { experiments, projects } from '@/src/data'
-import * as layoutModel from '@/src/models/layout.model'
-import Link from '@/src/components/link'
-import Picture from '@/src/components/picture'
+import { experiments, projects } from '~/src/data'
+import * as layoutModel from '~/src/models/layout.model'
+import Link from '~/src/components/link'
+import Picture from '~/src/components/picture'
 import styles from './nav.component.module.css'
 
 const EMPTY_ARRAY = []

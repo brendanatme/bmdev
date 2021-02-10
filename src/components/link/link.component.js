@@ -15,8 +15,8 @@
 import { useState } from 'react'
 import useRouter from 'next/router'
 import { wait } from '@brendanatme/utils'
-import KeyHandler, { ENTER } from '@/src/components/key-handler'
-import * as layoutModel from '@/src/models/layout.model'
+import KeyHandler, { ENTER } from '~/src/components/key-handler'
+import * as layoutModel from '~/src/models/layout.model'
 
 const KEYS = [ENTER]
 const NOOP = () => null

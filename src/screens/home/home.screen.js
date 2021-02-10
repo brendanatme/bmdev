@@ -5,12 +5,12 @@
  * (sections within screen)
  */
 import { useEffect, useState } from 'react'
-import { clients, projects, socials } from '@/src/data'
-import Frame from '@/src/base/frame'
-import Screen from '@/src/base/screen'
-import Carousel from '@/src/components/carousel'
-import Title from '@/src/components/title'
-import SvgIcon from '@/src/components/svg-icon'
+import { clients, projects, socials } from '~/src/data'
+import Frame from '~/src/base/frame'
+import Screen from '~/src/base/screen'
+import Carousel from '~/src/components/carousel'
+import Title from '~/src/components/title'
+import SvgIcon from '~/src/components/svg-icon'
 import IconWithText from './icon-with-text'
 import Project from './project'
 import styles from './home.screen.module.css'

@@ -1,9 +1,9 @@
 import React from 'react'
-import Logo from '@/src/components/logo'
-import NavToggle from '@/src/components/nav-toggle'
-import Nav from '@/src/components/nav'
-import PageTransition from '@/src/components/page-transition'
-import * as layoutModel from '@/src/models/layout.model'
+import Logo from '~/src/components/logo'
+import NavToggle from '~/src/components/nav-toggle'
+import Nav from '~/src/components/nav'
+import PageTransition from '~/src/components/page-transition'
+import * as layoutModel from '~/src/models/layout.model'
 
 const MainLayout = ({ children }) => {
   const navIsOpen = layoutModel.select.navIsOpen()

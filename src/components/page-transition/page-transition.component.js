@@ -1,6 +1,6 @@
 import React from 'react'
-import * as layoutModel from '@/src/models/layout.model'
-import LogoSvg from '@/src/svgs/logo.svg'
+import * as layoutModel from '~/src/models/layout.model'
+import LogoSvg from '~/src/svgs/logo.svg'
 import styles from './page-transition.component.module.css'
 
 const text = ['L', 'O', 'A', 'D', 'I', 'N', 'G']

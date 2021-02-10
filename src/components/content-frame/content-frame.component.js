@@ -5,9 +5,9 @@
  * using the "layout" property
  * to determine how to display the content
  */
-import Frame from '@/src/base/frame'
-import Html from '@/src/components/html'
-import Picture from '@/src/components/picture'
+import Frame from '~/src/base/frame'
+import Html from '~/src/components/html'
+import Picture from '~/src/components/picture'
 
 const Banner = ({ contents }) => (
   <div className="container md:flex items-center justify-center">

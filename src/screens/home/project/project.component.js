@@ -1,5 +1,5 @@
-import Link from '@/src/components/link'
-import Picture from '@/src/components/picture'
+import Link from '~/src/components/link'
+import Picture from '~/src/components/picture'
 import styles from './project.component.module.css'
 
 const ProjectThumb = ({ project }) => {

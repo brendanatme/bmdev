@@ -5,9 +5,9 @@
  * 
  * data is contained in /src/data/projects.data.js
  */
-import Screen from '@/src/base/screen'
-import Carousel from '@/src/components/carousel'
-import ContentFrame from '@/src/components/content-frame'
+import Screen from '~/src/base/screen'
+import Carousel from '~/src/components/carousel'
+import ContentFrame from '~/src/components/content-frame'
 
 const ProjectScreen = ({ project }) => {
   return (

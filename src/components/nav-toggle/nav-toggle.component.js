@@ -1,7 +1,7 @@
 import React from 'react'
-import * as layoutModel from '@/src/models/layout.model'
-import KeyHandler, { ESC } from '@/src/components/key-handler'
-import LiveIcon from '@/src/components/live-icon'
+import * as layoutModel from '~/src/models/layout.model'
+import KeyHandler, { ESC } from '~/src/components/key-handler'
+import LiveIcon from '~/src/components/live-icon'
 import styles from './nav-toggle.component.module.css'
 
 const KEYS = [ESC]

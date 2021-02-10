@@ -1,4 +1,4 @@
-import SvgIcon from '@/src/components/svg-icon'
+import SvgIcon from '~/src/components/svg-icon'
 
 const IconWithText = ({
   className = '',

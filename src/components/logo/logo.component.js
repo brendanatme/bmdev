@@ -1,5 +1,5 @@
-import LogoSvg from '@/src/svgs/logo.svg'
-import Link from '@/src/components/link'
+import LogoSvg from '~/src/svgs/logo.svg'
+import Link from '~/src/components/link'
 import styles from './logo.component.module.css'
 
 const Logo = ({
