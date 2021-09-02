@@ -2,8 +2,7 @@ import React, { useRef } from 'react'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
 import { experiments, projects } from '~/src/data'
 import * as layoutModel from '~/src/models/layout.model'
-import Link from '~/src/components/link'
-import Picture from '~/src/components/picture'
+import Thumb from './thumb'
 import styles from './nav.component.module.css'
 
 const EMPTY_ARRAY = []
@@ -102,9 +101,7 @@ const Nav = ({
             <ul className="flex flex-wrap items-left h-48 md:h-64 lg:h-32">
               {tiles1((style, project) => (
                 <animated.li className="w-24 h-24 md:w-32 md:h-32 relative" style={style}>
-                  <Link className="block fill" href={`/projects/${project.id}`} tabIndex="0">
-                    <Picture image={project.images.banner} only="sm" />
-                  </Link>
+                  <Thumb image={project.images.banner} url={`/projects/${project.id}`} />
                 </animated.li>
               ))}
             </ul>
@@ -115,13 +112,8 @@ const Nav = ({
           <nav className="my-2" aria-label="Experiments">
             <ul className="flex flex-wrap items-left h-24 md:h-32">
               {tiles2((style, experiment) => (
-                <animated.li
-                  className="relative w-24 h-24 md:w-32 md:h-32"
-                  style={style}
-                >
-                  <a className="block fill focusable" href={experiment.url} target="_blank">
-                    <Picture image={experiment.images.thumb} only="sm" />
-                  </a>
+                <animated.li className="relative w-24 h-24 md:w-32 md:h-32" style={style}>
+                  <Thumb image={experiment.images.thumb} url={experiment.url} blank />
                 </animated.li>
               ))}
             </ul>
