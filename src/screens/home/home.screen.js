@@ -26,7 +26,7 @@ const expertisePoints = [
     className: 'fade-in-slide-up-350',
     icon: 'Architecture',
     heading: ['Software', 'Development'],
-    text: 'Creating extensible software ready to handle evolving business needs&mdash;and the workflows to scale it',
+    text: 'Creating extensible software ready to handle evolving business needs—and the workflows to scale it',
   },
   {
     className: 'fade-in-slide-up-400',
