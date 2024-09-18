@@ -8,7 +8,7 @@ export default [
         lg: [{ src: '/experiments/vdm.svg', type: 'svg' }],
       },
     },
-    url: 'http://vdm.brendanat.me',
+    url: 'https://vdm.brendanm.dev',
   },
   {
     id: 'txtcalc',
