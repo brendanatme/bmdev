@@ -49,7 +49,7 @@ const HomeScreen = () => {
   return (
     <Screen
       title="Hello!"
-      description="Hi, I'm Brendan. I'm an award-winning full-stack developer of nine years. I plan, create, and grow online products."
+      description="Hi, I'm Brendan. I'm an award-winning full-stack engineer of 15 years. I plan, create, and grow online platforms."
     >
       <Carousel
         activeClass={styles.active}
@@ -62,8 +62,8 @@ const HomeScreen = () => {
                 <div className="text-hero-1 my-5 text-yellow-300 fade-in-slide-up-250">Hi,</div>
                 <div className="text-hero-2 my-5 fade-in-slide-up-300">I'm Brendan.</div>
               </h1>
-              <p className="text-display-1 my-5 fade-in-slide-up-350">I'm an award-winning, full-stack developer of nine years.</p>
-              <p className="text-display-2 my-5 fade-in-slide-up-400">I plan, create, and grow online products.</p>
+              <p className="text-display-1 my-5 fade-in-slide-up-350">I'm an award-winning, full-stack eningeer of 15 years.</p>
+              <p className="text-display-2 my-5 fade-in-slide-up-400">I plan, create, and grow online platforms.</p>
             </div>
           </div>
         </Frame>
@@ -71,7 +71,7 @@ const HomeScreen = () => {
           <Title>Expertise</Title>
           <div className="container p-6 text-white">
             <p className="font-sans text-md md:text-xl mb-8 md:mb-20 md:-mt-20 max-w-xl fade-in-slide-up-250">
-              I specialize in (some of) the work that goes into building a successful web app, platform, product, or service:
+              I specialize in some of the work that goes into building a successful web app, platform, product, or service:
             </p>
             <div className="md:flex md:justify-evenly">
               {expertisePoints.map((point) => (<IconWithText {...point} key={point.text} />))}

@@ -1,0 +1,7 @@
+- Update hello text √
+- Update email x
+- Add management icon and text
+- Update projects
+- Update experiments
+- Key handler for projects
+- preload menu images
