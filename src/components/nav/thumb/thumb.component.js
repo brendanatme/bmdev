@@ -9,6 +9,7 @@ const Thumb = ({
   url,
 }) => {
   const C = blank ? 'a' : Link
+
   return (
     <C
       className={`${styles.thumb} block fill overflow-hidden`}

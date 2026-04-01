@@ -1,7 +1,8 @@
 - Update hello text √
 - Update email x
-- Add management icon and text
+- Add management icon and text √
+- preload menu images √
+- Better project mobile styles √
 - Update projects
 - Update experiments
 - Key handler for projects
-- preload menu images

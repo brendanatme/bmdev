@@ -25,12 +25,9 @@
 }
 .project:hover .overlay { opacity: 1; }
 .project:active .overlay { opacity: 0.8; }
-@media only screen and (max-width: 768px) {
-  .overlay { opacity: 1; }
-}
 
 .metaBg {
-  background: #373842;
+  background: #212735;
 }
 
 .line {
