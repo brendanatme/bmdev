@@ -38,7 +38,7 @@ const expertisePoints = [
     className: "fade-in-slide-up-450",
     icon: "HighFive",
     heading: ["Team", "Leadership"],
-    text: "Finding, hiring, mentoring and helping great people",
+    text: "Finding, hiring, mentoring and helping people to do our best work",
   },
 ];
 
@@ -83,7 +83,7 @@ const HomeScreen = () => {
           <div className="container p-6 text-white">
             <p className="font-sans text-md md:text-xl mb-8 md:mb-20 md:-mt-20 max-w-xl fade-in-slide-up-250">
               I specialize in some of the work that goes into building a
-              successful web app, platform, product, or service:
+              successful online platform, product, or service:
             </p>
             <div className="md:flex md:justify-evenly">
               {expertisePoints.map((point) => (
