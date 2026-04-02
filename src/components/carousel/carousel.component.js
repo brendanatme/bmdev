@@ -11,7 +11,7 @@ import { useGesture } from 'react-use-gesture'
 import { animated, useSpring, useSprings } from '@react-spring/web'
 import { useScreen } from '@brendanatme/react-utils/hooks'
 import Delayed from 'react-delayed'
-import KeyHandler, { DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW, UP_ARROW } from '~/src/components/key-handler'
+import KeyHandler, { DOWN_ARROW, ENTER, LEFT_ARROW, RIGHT_ARROW, UP_ARROW } from '~/src/components/key-handler'
 import LiveIcon from '~/src/components/live-icon'
 import { calcSlideSpring } from './carousel.helpers'
 import styles from './carousel.component.module.css'
@@ -151,19 +151,20 @@ const Carousel = ({
   const next = () => goto(1)
   const prev = () => goto(-1)
 
-  const handleKeyPress = (key) => key === DOWN_ARROW || key === RIGHT_ARROW ? next() : prev()
+  const handleKeyPressNav = (key) => key === DOWN_ARROW || key === RIGHT_ARROW ? next() : prev()
+  const handleKeyPressEnter = (key) => {
+    
+  }
 
   return (
     <div className={`${styles.carousel} ${styles[axis]} fullscreen`}>
-      <KeyHandler
-        handleKeys={ARROWS[axis]}
-        onKeyEvent={handleKeyPress}
-      />
+      <KeyHandler handleKeys={ARROWS[axis]} onKeyEvent={handleKeyPressNav} />
+      <KeyHandler handleKeys={[ENTER]} onKeyEvent={handleKeyPressEnter} />
       <div className={`fill ${styles.scene}`}>
         <div className={`fill ${styles.slides}`} {...bind()}>
           {springs.map((styleProps, i) => (
             <animated.div
-              className={`fill ${i === index.current ? 'slide--active ' + activeClass : ''} ${styles.slide} ${overflow ? styles.overflow : ''} ${isGrabbing ? styles.isGrabbing : ''}`}
+              className={`fill ${i === index.current ? "slide--active " + activeClass : ""} ${styles.slide} ${overflow ? styles.overflow : ""} ${isGrabbing ? styles.isGrabbing : ""}`}
               key={i}
               style={styleProps}
             >
@@ -186,10 +187,10 @@ const Carousel = ({
           </Delayed>
         </animated.button>
       ) : (
-        ''
+        ""
       )}
     </div>
-  )
+  );
 }
 
 export default Carousel
