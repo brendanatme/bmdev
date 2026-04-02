@@ -3,12 +3,16 @@
 .client2 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(0deg) translateY(200px); }
 .client3 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(5deg) translateY(212px); }
 .client4 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(10deg) translateY(248px); }
+.client5 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(15deg) translateY(260px); }
+.client6 { opacity: 0; transition: opacity .2s, transform .2s; transform: rotate(20deg) translateY(260px); }
 
 .active .client0 { opacity: 1; transition: opacity 1s linear .25s, transform 1s cubic-bezier(.02,.78,.24,.98) .25s; transform: rotate(-12deg) translateY(60px); }
 .active .client1 { opacity: 1; transition: opacity 1s linear .30s, transform 1s cubic-bezier(.02,.78,.24,.98) .30s; transform: rotate(-5deg) translateY(15px); }
 .active .client2 { opacity: 1; transition: opacity 1s linear .35s, transform 1s cubic-bezier(.02,.78,.24,.98) .35s; transform: rotate(0deg) translateX(40px) translateY(-25px); }
 .active .client3 { opacity: 1; transition: opacity 1s linear .40s, transform 1s cubic-bezier(.02,.78,.24,.98) .40s; transform: rotate(5deg) translateX(-25px) translateY(-60px); }
 .active .client4 { opacity: 1; transition: opacity 1s linear .45s, transform 1s cubic-bezier(.02,.78,.24,.98) .45s; transform: rotate(10deg) translateX(-18px) translateY(-90px); }
+.active .client5 { opacity: 1; transition: opacity 1s linear .50s, transform 1s cubic-bezier(.02,.78,.24,.98) .50s; transform: rotate(15deg) translateX(18px) translateY(-90px); }
+.active .client6 { opacity: 1; transition: opacity 1s linear .55s, transform 1s cubic-bezier(.02,.78,.24,.98) .55s; transform: rotate(20deg) translateX(25px) translateY(-60px); }
 
 @media only screen and (min-width: 768px) {
   .active .client0 { transform: rotate(-12deg) translateY(60px); }
@@ -16,6 +20,8 @@
   .active .client2 { transform: rotate(0deg) translateY(0px); }
   .active .client3 { transform: rotate(5deg) translateY(12px); }
   .active .client4 { transform: rotate(10deg) translateY(48px); }
+  .active .client5 { transform: rotate(15deg) translateY(60px); }
+  .active .client6 { transform: rotate(20deg) translateY(60px); }
 }
 
 .social {

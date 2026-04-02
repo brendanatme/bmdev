@@ -116,7 +116,7 @@ const HomeScreen = () => {
                   key={`client${i}`}
                 >
                   <div
-                    className={`relative p-5 z-10 bg-white ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
+                    className={`relative p-5 z-10 ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
                   >
                     <img
                       alt={client.thumb.alt}
