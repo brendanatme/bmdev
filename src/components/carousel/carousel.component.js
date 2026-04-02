@@ -8,7 +8,7 @@
 import clamp from 'lodash.clamp'
 import { useEffect, useRef, useState } from 'react'
 import { useGesture } from 'react-use-gesture'
-import { animated, useSpring, useSprings } from '@react-spring/web'
+import { a, animated, useSpring, useSprings } from '@react-spring/web'
 import { useScreen } from '@brendanatme/react-utils/hooks'
 import Delayed from 'react-delayed'
 import KeyHandler, { DOWN_ARROW, ENTER, LEFT_ARROW, RIGHT_ARROW, UP_ARROW } from '~/src/components/key-handler'
@@ -40,6 +40,7 @@ const Carousel = ({
   tabIndex = null,
   enterEnabled = false,
 }) => {
+  const thisEl = useRef(null)
   const hasDragged = useRef(false)
   const dirKey = DIR_MAP[axis]
   const index = useRef(0)
@@ -156,16 +157,22 @@ const Carousel = ({
 
   const handleKeyPressNav = (key) => key === DOWN_ARROW || key === RIGHT_ARROW ? next() : prev()
   const handleKeyPressEnter = () => {
-    const childEl = childRefs.current[index.current]
-    if (childEl?.firstChild?.firstChild) {
+    // only enter if there is a parent element with the class "slide--active"
+    if (!thisEl.current?.closest('.slide--active')) {
+      return
+    }
+    
+    const childEl = childRefs.current[index.current];
+    
+    if (childEl?.firstChild?.firstChild) { 
       childEl.firstChild?.firstChild.dispatchEvent(
         new MouseEvent("click", { bubbles: true }),
-      )
+      );
     }
   }
 
   return (
-    <div className={`${styles.carousel} ${styles[axis]} fullscreen`}>
+    <div ref={thisEl} className={`${styles.carousel} ${styles[axis]} fullscreen`}>
       <KeyHandler handleKeys={ARROWS[axis]} onKeyEvent={handleKeyPressNav} />
       {enterEnabled && <KeyHandler handleKeys={[ENTER]} onKeyEvent={handleKeyPressEnter} /> }
       <div className={`fill ${styles.scene}`}>
