@@ -1,15 +1,15 @@
 const Actual = {
   thumbClient: "Actual",
   client: "Actual",
-  date: "2024",
-  id: "actual-app",
+  date: "2025",
+  id: "actual-platform",
   description:
-    "Actual is a hospitality management platform that helps restaurants and bars manage their operations, distribute tips, and payroll.",
+    "Actual is a hospitality management platform that helps restaurants, bars, and hotels manage their operations, distribute tips, and run payroll.",
   images: {
     banner: {
-      alt: "Agi3 map",
-      sm: [{ src: "/projects/agi3_map@lg.png", type: "png" }],
-      lg: [{ src: "/projects/agi3_map@lg.png", type: "png" }],
+      alt: "Actual dashboard",
+      sm: [{ src: "/projects/actual@lg.png", type: "png" }],
+      lg: [{ src: "/projects/actual@lg.png", type: "png" }],
     },
   },
   name: "Actual platform",
@@ -19,8 +19,33 @@ const Actual = {
 Actual.frames = [
   {
     layout: "Banner",
+    contents: [Actual.images.banner, Actual.name, Actual.client, Actual.date],
+  },
+  {
+    layout: "TextLeftImageRight",
     contents: [
       Actual.images.banner,
+      `<h2 class="fade-in-slide-up-300 mb-6"><span class="text-yellow-300">Actual</span> is a hospitality management platform.</h2>
+      <p class="fade-in-slide-up-350">It helps restaurants, bars, and hotels manage their operations, distribute tips, and run payroll.</p>`,
+    ],
+  },
+  {
+    layout: "TextCenter",
+    contents: [
+      `<h2 class="fade-in-slide-up-300 mb-6">It solves a number of <span class="text-yellow-300">complex problems</span>:</h2><p class="fade-in-slide-up-350">&bullet; High volume of financial transactions<br />&bullet; Complex rules around tip distribution<br />&bullet; High degree of flexibility for customers</p>`,
+    ],
+  },
+  {
+    layout: "TextLeftTextRight",
+    contents: [
+      `<h2 class="fade-in-slide-up-300">Actual is built with React, Django, and Postgres.</h2>`,
+      `<p class="fade-in-slide-up-350 mb-10">The platform is built and maintained by a small team. My role on the project was lead engineer.</p>
+      <p class="fade-in-slide-up-400">
+        <a class="button focusable" href="https://onactual.com/" target="_blank">
+          <span class="button__label">Visit Website</span>
+          <span class="button__hover-label">Visit Website</span>
+        </a>
+      </p>`,
     ],
   },
 ];
@@ -29,7 +54,7 @@ const Agi3 = {
   thumbClient: "AGI3",
   client: "AGI3",
   date: "2022",
-  id: "agi3-app",
+  id: "agi3-platform",
   description:
     "Agi3 is a self-serve insurance platform that allows farmers to manage their insurance policies, file claims, and more.",
   images: {

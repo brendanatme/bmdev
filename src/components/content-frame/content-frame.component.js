@@ -75,11 +75,21 @@ const TextLeftTextRight = ({ contents }) => (
   </div>
 )
 
+const TextCenter = ({ contents }) => (
+  <div className="container text-center">
+    <Html
+      className="relative py-2 px-6 md:p-0 w-full md:w-3/4 lg:w-1/2 mx-auto"
+      content={contents[0]}
+    />
+  </div>
+)
+
 const Layouts = {
   Banner,
   ImageLeftTextRight,
   TextLeftImageRight,
   TextLeftTextRight,
+  TextCenter,
 }
 
 const ContentFrame = ({ layout, contents }) => {

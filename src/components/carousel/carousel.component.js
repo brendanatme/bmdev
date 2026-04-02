@@ -38,6 +38,7 @@ const Carousel = ({
   nextArrow = true,
   overflow = false,
   tabIndex = null,
+  enterEnabled = false,
 }) => {
   const hasDragged = useRef(false)
   const dirKey = DIR_MAP[axis]
@@ -166,14 +167,16 @@ const Carousel = ({
   return (
     <div className={`${styles.carousel} ${styles[axis]} fullscreen`}>
       <KeyHandler handleKeys={ARROWS[axis]} onKeyEvent={handleKeyPressNav} />
-      <KeyHandler handleKeys={[ENTER]} onKeyEvent={handleKeyPressEnter} />
+      {enterEnabled && <KeyHandler handleKeys={[ENTER]} onKeyEvent={handleKeyPressEnter} /> }
       <div className={`fill ${styles.scene}`}>
         <div className={`fill ${styles.slides}`} {...bind()}>
           {springs.map((styleProps, i) => (
             <animated.div
               className={`fill ${i === index.current ? "slide--active " + activeClass : ""} ${styles.slide} ${overflow ? styles.overflow : ""} ${isGrabbing ? styles.isGrabbing : ""}`}
               key={i}
-              ref={el => { childRefs.current[i] = el }}
+              ref={(el) => {
+                childRefs.current[i] = el;
+              }}
               style={styleProps}
             >
               {children[i]}

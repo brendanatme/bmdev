@@ -97,7 +97,7 @@ const HomeScreen = () => {
             Featured <span className="sm:br" />
             Projects
           </Title>
-          <Carousel axis="x" nextArrow={false} overflow>
+          <Carousel axis="x" nextArrow={false} overflow enterEnabled>
             {projects.map((project) => (
               <Project key={project.id} project={project} />
             ))}
