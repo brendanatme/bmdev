@@ -151,9 +151,16 @@ const Carousel = ({
   const next = () => goto(1)
   const prev = () => goto(-1)
 
+  const childRefs = useRef([])
+
   const handleKeyPressNav = (key) => key === DOWN_ARROW || key === RIGHT_ARROW ? next() : prev()
-  const handleKeyPressEnter = (key) => {
-    
+  const handleKeyPressEnter = () => {
+    const childEl = childRefs.current[index.current]
+    if (childEl?.firstChild?.firstChild) {
+      childEl.firstChild?.firstChild.dispatchEvent(
+        new MouseEvent("click", { bubbles: true }),
+      )
+    }
   }
 
   return (
@@ -166,6 +173,7 @@ const Carousel = ({
             <animated.div
               className={`fill ${i === index.current ? "slide--active " + activeClass : ""} ${styles.slide} ${overflow ? styles.overflow : ""} ${isGrabbing ? styles.isGrabbing : ""}`}
               key={i}
+              ref={el => { childRefs.current[i] = el }}
               style={styleProps}
             >
               {children[i]}
