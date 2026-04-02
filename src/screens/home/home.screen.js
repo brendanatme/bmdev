@@ -109,10 +109,10 @@ const HomeScreen = () => {
             Employers
           </Title>
           <div className="container p-6 text-white">
-            <div className="flex flex-wrap justify-evenly">
+            <div className={`flex flex-wrap justify-evenly ${styles.clientsBlock}`}>
               {clients.map((client, i) => (
                 <div
-                  className={`block m-5 relative z-10 ${styles["client" + i]} flex flex-col rounded overflow-hidden`}
+                  className={`block m-5 relative z-10 ${styles.client} ${styles["client" + i]} flex flex-col rounded overflow-hidden`}
                   key={`client${i}`}
                 >
                   <div
