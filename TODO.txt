@@ -5,5 +5,5 @@
 - Better project mobile styles √
 - Update projects √
 - Key handler for projects √
-- Update experiments
+- Update experiments √
 - Update clients
