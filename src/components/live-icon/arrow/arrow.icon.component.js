@@ -50,7 +50,7 @@ const makeArrowIcon = (degrees, hoverDegrees) => {
   }) => {
     const [springs, animate] = useSprings(2, start)
     
-    useEffect(() => animate(enter))
+    useEffect(() => { animate(enter) }, [])
 
     return (
       <animated.div

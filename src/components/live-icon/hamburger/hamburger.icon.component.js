@@ -22,7 +22,7 @@ const HamburgerIcon = ({
 }) => {
   const [springs, animate] = useSprings(3, enter)
 
-  useEffect(() => animate(shrink))
+  useEffect(() => { animate(shrink) }, [])
 
   return (
     <div

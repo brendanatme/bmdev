@@ -44,7 +44,7 @@ const XIcon = ({
 }) => {
   const [springs, animate] = useSprings(2, enter)
   
-  useEffect(() => animate(shrink))
+  useEffect(() => { animate(shrink) }, [])
 
   return (
     <animated.div

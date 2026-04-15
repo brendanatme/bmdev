@@ -82,10 +82,12 @@ const Carousel = ({
     setSprings((i) => calcByAxis(i, index.current))
   }, [children[0].key])
 
-  useEffect(() => setSprings((i) => calcByAxis(
-    i,
-    index.current,
-  )), [dim])
+  useEffect(() => {
+    setSprings((i) => calcByAxis(
+      i,
+      index.current,
+    ))
+  }, [dim])
 
   const bind = useGesture(
     {
