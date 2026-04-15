@@ -8,11 +8,11 @@
 import clamp from 'lodash.clamp'
 import { useEffect, useRef, useState } from 'react'
 import { useGesture } from 'react-use-gesture'
-import { a, animated, useSpring, useSprings } from '@react-spring/web'
-import { useScreen } from '@brendanatme/react-utils/hooks'
+import { animated, useSpring, useSprings } from '@react-spring/web'
 import Delayed from 'react-delayed'
 import KeyHandler, { DOWN_ARROW, ENTER, LEFT_ARROW, RIGHT_ARROW, UP_ARROW } from '~/src/components/key-handler'
 import LiveIcon from '~/src/components/live-icon'
+import useScreen from '~/src/hooks/useScreen'
 import { calcSlideSpring } from './carousel.helpers'
 import styles from './carousel.component.module.css'
 
