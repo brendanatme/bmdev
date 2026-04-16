@@ -12,10 +12,10 @@ const IconWithText = ({
     >
       <div className="flex md:block">
         <SvgIcon
-          className="square-80 xs:square-100 fill-current text-yellow-300 ml-2 mr-2 md:ml-0"
+          className="square-80 fill-current text-yellow-300 ml-2 mr-2 md:ml-0"
           type={icon}
         />
-        <h3 className="mt-2 md:mt-1 font-sans font-medium text-2xl md:text-3xl">
+        <h3 className="mt-1 font-sans font-medium text-xl md:text-3xl">
           {first}<br />{second}
         </h3>
       </div>

@@ -81,7 +81,7 @@ const HomeScreen = () => {
         <Frame key="frame1">
           <Title>Expertise</Title>
           <div className="container p-6 text-white">
-            <p className="font-sans text-md md:text-xl mb-8 md:mb-20 md:-mt-20 max-w-xl fade-in-slide-up-250">
+            <p className="font-sans text-sm md:text-xl mb-8 md:mb-20 md:-mt-20 max-w-xl fade-in-slide-up-250">
               I specialize in some of the work that goes into building a
               successful online platform, product, or service:
             </p>
@@ -112,11 +112,11 @@ const HomeScreen = () => {
             <div className={`flex flex-wrap justify-evenly ${styles.clientsBlock}`}>
               {clients.map((client, i) => (
                 <div
-                  className={`block m-5 relative z-10 ${styles.client} ${styles["client" + i]} flex flex-col rounded overflow-hidden`}
+                  className={`block m-1 md:m-5 relative z-10 ${styles.client} ${styles["client" + i]} flex flex-col rounded overflow-hidden`}
                   key={`client${i}`}
                 >
                   <div
-                    className={`relative p-5 z-10 ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
+                    className={`relative p-2 md:p-5 z-10 ${client.thumb.bg} ${client.thumb.op} flex-grow flex flex-col justify-center`}
                   >
                     <img
                       alt={client.thumb.alt}

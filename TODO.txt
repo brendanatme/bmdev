@@ -6,4 +6,5 @@
 - Update projects √
 - Key handler for projects √
 - Update experiments √
-- Update clients
+- Update clients √
+- update mobile styles √

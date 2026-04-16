@@ -1,6 +1,6 @@
 .project {
   box-shadow: 0 0 40px rgba(0,0,0,0.15);
-  height: 67vh;
+  height: 60vh;
   width: 50vw;
 }
 @media only screen and (min-width: 769px) {
