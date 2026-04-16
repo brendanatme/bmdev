@@ -11,14 +11,14 @@ export default [
     url: 'https://vdm.brendanm.dev',
   },
   {
-    id: 'txtcalc',
+    id: 'offnotes',
     images: {
       thumb: {
-        alt: 'TXTCalc Logo',
-        sm: [{ src: '/experiments/txtcalc.svg', type: 'svg' }],
-        lg: [{ src: '/experiments/txtcalc.svg', type: 'svg' }],
+        alt: 'OffNotes Logo',
+        sm: [{ src: '/experiments/offnotes.svg', type: 'svg' }],
+        lg: [{ src: '/experiments/offnotes.svg', type: 'svg' }],
       },
     },
-    url: 'https://txtcalc.brendanm.dev',
+    url: 'https://notes.brendanm.dev',
   },
 ]
