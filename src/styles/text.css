@@ -13,12 +13,24 @@
   user-select: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .text-hero-1 {
+    font-size: 5rem;
+  }
+}
+
 .text-hero-2 {
   @apply font-sans font-bold text-5xl;
   left: -0.1rem;
   line-height: 1;
   position: relative;
   user-select: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-hero-2 {
+    font-size: 3rem;
+  }
 }
 
 .text-display-1 {
