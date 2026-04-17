@@ -10,14 +10,8 @@ npm run dev
 
 ## Deployment
 
-Build project:
+Build and export static project:
 
 ```bash
-npm run build
-```
-
-Start prod server:
-
-```bash
-npm start
+npm run export
 ```
