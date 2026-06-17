@@ -16,7 +16,7 @@ import ContactFrame from './frames/contact-frame'
 const HomeScreen = () => (
   <Screen
     title="Hello!"
-    description="Hi, I'm Brendan. I'm an award-winning full-stack engineer of 15 years. I plan, create, and grow online platforms."
+    description="Hi, I'm Brendan. I'm an award-winning full-stack engineer of over 10 years. I plan, create, and grow online platforms."
   >
     <Carousel tabIndex="2">
       <IntroFrame key="frame0" />

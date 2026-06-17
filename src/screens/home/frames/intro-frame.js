@@ -13,7 +13,7 @@ const IntroFrame = () => (
           </div>
         </h1>
         <p className="text-display-1 my-5 fade-in-slide-up-350">
-          I'm an award-winning, full-stack engineer of 15 years.
+          I'm an award-winning full-stack engineer of over 10 years.
         </p>
         <p className="text-display-2 my-5 fade-in-slide-up-400">
           I plan, create, and grow online platforms.

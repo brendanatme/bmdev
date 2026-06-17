@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { animated, useChain, useSpring, useTransition } from '@react-spring/web'
-import SvgIcon from '~/src/components/svg-icon'
 import { experiments, projects } from '~/src/data'
 import * as layoutModel from '~/src/models/layout.model'
 import Thumb from './thumb'
@@ -109,12 +108,12 @@ const Nav = ({
           </nav>
         </section>
         <section className="my-6 md:my-10">
-          <animated.h3 className="flex text-display-2" style={text2}>Experiments <SvgIcon className={styles.expIcon} type="ExternalLink" /></animated.h3>
+          <animated.h3 className="text-display-2" style={text2}>Experiments</animated.h3>
           <nav className="my-2" aria-label="Experiments">
             <ul className="flex flex-wrap items-left h-16 md:h-32">
               {tiles2((style, experiment) => (
                 <animated.li className="relative w-16 h-16 md:w-32 md:h-32" style={style}>
-                  <Thumb image={experiment.images.thumb} url={experiment.url} blank />
+                  <Thumb image={experiment.images.thumb} url={`/experiments/${experiment.id}`} />
                 </animated.li>
               ))}
             </ul>
