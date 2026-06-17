@@ -1,0 +1,24 @@
+.clientsBlock {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client {
+  opacity: 0;
+  transition: opacity .2s, transform .2s;
+  transform: translateY(200px);
+}
+
+:global(.slide--active) .client {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+:global(.slide--active) .client0 { transition: opacity 1s linear .25s, transform 1s cubic-bezier(.02,.78,.24,.98) .25s; }
+:global(.slide--active) .client1 { transition: opacity 1s linear .30s, transform 1s cubic-bezier(.02,.78,.24,.98) .30s; }
+:global(.slide--active) .client2 { transition: opacity 1s linear .35s, transform 1s cubic-bezier(.02,.78,.24,.98) .35s; }
+:global(.slide--active) .client3 { transition: opacity 1s linear .40s, transform 1s cubic-bezier(.02,.78,.24,.98) .40s; }
+:global(.slide--active) .client4 { transition: opacity 1s linear .45s, transform 1s cubic-bezier(.02,.78,.24,.98) .45s; }
+:global(.slide--active) .client5 { transition: opacity 1s linear .50s, transform 1s cubic-bezier(.02,.78,.24,.98) .50s; }
+:global(.slide--active) .client6 { transition: opacity 1s linear .55s, transform 1s cubic-bezier(.02,.78,.24,.98) .55s; }
