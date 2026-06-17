@@ -6,10 +6,10 @@ const ExperimentThumb = ({ experiment }) => (
     <Link href={`/experiments/${experiment.id}`}>
       <div className={`${styles.experiment} rounded overflow-hidden relative`}>
         <img
-          alt={experiment.images.thumb.alt}
+          alt={experiment.images.banner.alt}
           className={styles.logo}
           draggable="false"
-          src={experiment.images.thumb.lg[0].src}
+          src={experiment.images.banner.lg[0].src}
         />
         <div className={`fill ${styles.overlay} flex items-center justify-center`}>
           <div className={`${styles.name} text-white text-display-1`}>
